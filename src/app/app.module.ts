@@ -13,6 +13,7 @@ import { QuizComponent } from './main/quiz/quiz.component';
 import { AboutUsComponent } from './main/about-us/about-us.component';
 import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
+import { DiscoverComponent } from './main/discover/discover.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { ValuesComponent } from './main/values/values.component';
     HeaderComponent,
     FooterComponent,
     QuizComponent,
-    AboutUsComponent
+    AboutUsComponent,
     OfferComponent,
-    ValuesComponent
+    ValuesComponent,
+    DiscoverComponent
   ],
   imports: [
     BrowserModule,
