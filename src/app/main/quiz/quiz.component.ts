@@ -11,9 +11,6 @@ export class QuizComponent implements OnInit {
   notAttempted: any;
   correct: any;
   currentQuestionSet: any;
-  start = false;
-  gameover = false;
-  buttonname = 'Play';
 
   ngOnInit() {
   }
