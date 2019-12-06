@@ -1,0 +1,9 @@
+<section class="values-container container">
+    <div class="value-card" *ngFor="let value of values">
+        <img [src]="value.icon" alt="Icône {{value.icon}}">
+        <h4>{{value.title}}</h4>
+        <p [innerHTML]="value.text"></p>
+        <img src="../../../assets/others/decoration-bottom.svg" alt="Vagounette">
+    </div>
+</section>
+      
