@@ -81,8 +81,8 @@ export class QuizComponent implements OnInit {
   }
 
    submit() {
-    this.currentIndex=0;
-    this.currentQuestionSet= this.questions[this.currentIndex];
+    this.currentIndex = 0;
+    this.currentQuestionSet = this.questions[this.currentIndex];
    }
 
   }
