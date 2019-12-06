@@ -10,10 +10,6 @@
 
 
 /* Font-size */
-$h1: 90px;
-$h2: 56px;
-$h3: 44.8px;
-$h4: 30px;
 
 html,
 body{
@@ -31,6 +27,11 @@ body {
 
 p {
     line-height: 30px;
+
+    strong {
+        font-weight: bold;
+    }
+
 }
 
 h1 {
@@ -53,6 +54,8 @@ section {
     margin-top: 10% ;
 }
 //TODO ADD RESPONSIVE TITLE
+
+
 
 
 .button_primary {

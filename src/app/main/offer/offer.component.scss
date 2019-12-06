@@ -1,0 +1,27 @@
+@import "../../sharedStyles/colors.scss";
+
+.offer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 124px;
+    margin-bottom: 170px;
+    
+    .content-wrapper {
+        margin-left: 50px;
+
+        h2 {
+            max-width: 605px;
+            color: $Primary;
+        }
+
+        p {
+            line-height: 30px;
+        }
+    }
+
+    .decoration-aside {
+        display: block;
+    }
+}
