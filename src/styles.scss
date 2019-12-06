@@ -10,10 +10,6 @@
 
 
 /* Font-size */
-$h1: 90px;
-$h2: 56px;
-$h3: 44.8px;
-$h4: 30px;
 
 html,
 body{
@@ -27,6 +23,10 @@ body{
 body {
     font-size: 16px;
     font-family: ff-tisa-sans-web-pro, sans-serif;;
+
+    strong {
+        font-weight: bold;
+    }
 }
 
 h1 {
@@ -49,6 +49,8 @@ section {
     margin-top: 10% ;
 }
 //TODO ADD RESPONSIVE TITLE
+
+
 
 
 .button_primary {

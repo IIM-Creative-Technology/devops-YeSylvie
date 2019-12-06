@@ -10,6 +10,8 @@ import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './main/quiz/quiz.component';
+import { OfferComponent } from './main/offer/offer.component';
+import { ValuesComponent } from './main/values/values.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { QuizComponent } from './main/quiz/quiz.component';
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    QuizComponent
+    QuizComponent,
+    OfferComponent,
+    ValuesComponent
   ],
   imports: [
     BrowserModule,
