@@ -1,27 +1,40 @@
 @import "../../sharedStyles/colors.scss";
 
-.values-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .value-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 286px;
-        height: 425px;
-        text-align: center;
+// .values-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     .value-card {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         width: 286px;
+//         height: 425px;
+//         text-align: center;
 
-        h4 {
-            width: 250px;
-            margin: 0 auto;
-            color: $Secondary2;
-        }
+//         h4 {
+//             width: 250px;
+//             margin: 0 auto;
+//             color: $Secondary2;
+//         }
 
-        p {
-            width: 262px;
-            margin: 0 auto;
-            line-height: 30px;
-        }
-    }
+//         p {
+//             width: 262px;
+//             margin: 0 auto;
+//             line-height: 30px;
+//         }
+//     }
+// }
+
+.value-card {
+  padding: 0 7% 0 7%;
+  h4 {
+    width: 250px;
+    color: $Secondary2;
+  }
+
+  p {
+    width: 262px;
+    line-height: 30px;
+  }
 }
