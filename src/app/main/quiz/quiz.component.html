@@ -1,11 +1,12 @@
 <section id="quiz">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 offset-lg-1">
+            <div class="col-lg-8">
                 <div class="quiz-violet-bloc p-5">
-                    <h2>Définissons ta sélection</h2>
-                    <p>Et si nous participions à un petit jeu ? <br>
-                   Voici ci-dessous une série de questions portant sur tes goûts artistiques. Une fois terminé, nous te proposerons un ensemble de inserrez le bon mot sélectionné  par nos soins !                    </p>
+                    <h2 class="mb-3">Définissons ta sélection</h2>
+                    <p class="mb-2">Et si nous participions à un petit jeu ? </p>
+                    <p>Voici ci-dessous une série de questions portant sur tes goûts artistiques. Une fois terminé, nous te proposerons un ensemble de inserrez le bon mot sélectionné  par nos soins ! </p>
+    
                 </div>
             </div>
             <div class="col-lg-4">
@@ -13,8 +14,8 @@
             </div>
         </div>
         <div class="row mb-3 mt-5">
-            <div class="col-lg-12 text-center mx-auto">
-                <h5>{{currentQuestionSet.question}}</h5>
+            <div class="col-lg-12 text-center mx-auto quiz-question mb-2">
+                <h4>{{currentQuestionSet.question}}</h4>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -34,7 +35,7 @@
                     <a *ngIf="(currentIndex+1) != questions.length" (click)="next()"> <p>Question suivante </p></a>
             </div>
         </div>
-        <div class="row mt-3 mx-auto justify-content-center">
+        <div class="row mt-3 mx-auto justify-content-center mt-4">
                 <input *ngIf="(currentIndex) != questions.length" type="button" class="btn quiz-btn-submit" value="Admire ta sélection !" (click)="submit()" />
         </div>
     </div>
