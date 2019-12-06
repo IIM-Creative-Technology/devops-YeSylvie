@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './main/quiz/quiz.component';
+import { AboutUsComponent } from './main/about-us/about-us.component';
 import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
 
@@ -21,6 +22,7 @@ import { ValuesComponent } from './main/values/values.component';
     HeaderComponent,
     FooterComponent,
     QuizComponent,
+    AboutUsComponent
     OfferComponent,
     ValuesComponent
   ],

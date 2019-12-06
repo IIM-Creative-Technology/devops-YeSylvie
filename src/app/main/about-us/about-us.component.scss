@@ -1,0 +1,9 @@
+@import "../../sharedStyles/colors.scss";
+@import "../../sharedStyles/buttons.scss";
+
+.about-us-text {
+    h2 {
+        color: $Primary;
+        font-family: rimouski;
+    }
+}
