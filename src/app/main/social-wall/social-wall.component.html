@@ -1,17 +1,39 @@
 <section id="social-wall">
   <div class="content-wrapper">
-    <div class="social-wall_card">
-      <a href="">
-        <div class="preview_image"></div>
+    <div class="social-wall_card" *ngFor="let article of articles">
+      <a [href]="article.url" target="_blanck">
+        <div class="preview-image_wrapper">
+          <div class="preview_image"  [ngStyle]="{'backgroundImage':'url(' + article.nom_img + ')'}"></div>
+        </div>
         <div class="title_container">
-          <h4>Card Title</h4>
+            <button class="source-article_icon">
+                <img src="../../../assets/icons/Logo FB.svg" alt="">
+            </button>
+          <h4>{{ article.titre }}</h4>
         </div>
       </a>
       <div class="card_footer">
-        <div class="date">Le premier janvier 1970</div>
-        <button class="share_button">
-          <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
-        </button>
+        <div class="date">{{ article.date }}</div>
+
+        <div class="share-buttons_container">
+          <div class="social-buttons_container" [hidden]="!hideme[article.id]" >
+            <button class="social-media_button facebook" [url]="article.url" shareButton="facebook">
+              <img
+                src="../../../assets/icons/Logo FB.svg"
+                alt="Icône Facebook"
+              />
+            </button>
+            <button class="social-media_button twitter" [url]="article.url" shareButton="twitter">
+              <img
+                src="../../../assets/icons/Logo Twitter.svg"
+                alt="Icône Twitter"
+              />
+            </button>
+          </div>
+          <button (click)="show(article.id)" class="share_button">
+            <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
