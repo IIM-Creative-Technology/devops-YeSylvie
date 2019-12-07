@@ -1,17 +1,35 @@
 <section id="social-wall">
   <div class="content-wrapper">
-    <div class="social-wall_card">
+    <div class="social-wall_card" *ngFor="let article of articles">
       <a href="">
-        <div class="preview_image"></div>
+        <div class="preview_image" [style.backgroundImage]="article.nom_img">
+        </div>
         <div class="title_container">
-          <h4>Card Title</h4>
+          <h4>{{ article.titre }}</h4>
         </div>
       </a>
       <div class="card_footer">
-        <div class="date">Le premier janvier 1970</div>
-        <button class="share_button">
-          <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
-        </button>
+        <div class="date">{{ article.date }}</div>
+
+        <div class="share-buttons_container">
+          <div class="social-buttons_container">
+            <button class="social-media_button facebook" shareButton="facebook">
+              <img
+                src="../../../assets/icons/Logo FB.svg"
+                alt="Icône Facebook"
+              />
+            </button>
+            <button class="social-media_button twitter" shareButton="twitter">
+              <img
+                src="../../../assets/icons/Logo Twitter.svg"
+                alt="Icône Twitter"
+              />
+            </button>
+          </div>
+          <button class="share_button">
+            <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
