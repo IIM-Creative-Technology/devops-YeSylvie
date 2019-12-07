@@ -4,7 +4,7 @@
 @import "./app/sharedStyles/colors.scss";
 
 @font-face {
-    font-family: rimouski;
+    font-family: "Rimouski";
     src: url(assets/fonts/rimouskisb.ttf) format("opentype");
   }
 
@@ -36,18 +36,22 @@ p {
 
 h1 {
   font-size: 90px;  
+  font-family: "Rimouski";
 }
 
 h2 {
     font-size: 56px;
+    font-family: "Rimouski";
 }
 
 h3 {
     font-size: 44.8px;
+    font-family: "Rimouski";
 }
 
 h4 {
     font-size: 30px;
+    font-family: "Rimouski";
 }
 
 section {

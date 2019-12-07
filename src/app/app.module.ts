@@ -14,6 +14,7 @@ import { AboutUsComponent } from './main/about-us/about-us.component';
 import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
 import { DiscoverComponent } from './main/discover/discover.component';
+import { SocialWallComponent } from './main/social-wall/social-wall.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DiscoverComponent } from './main/discover/discover.component';
     AboutUsComponent,
     OfferComponent,
     ValuesComponent,
-    DiscoverComponent
+    DiscoverComponent,
+    SocialWallComponent
   ],
   imports: [
     BrowserModule,
