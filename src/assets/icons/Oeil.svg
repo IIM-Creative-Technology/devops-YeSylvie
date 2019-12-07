@@ -1,4 +1,4 @@
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 8C16.8012 5.54708 13.5841 4 10 4C6.41592 4 3.19883 5.54708 1 8" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round"/>
-<circle cx="10" cy="11" r="4" fill="#3D3D3D"/>
+<path d="M19 8C16.8012 5.54708 13.5841 4 10 4C6.41592 4 3.19883 5.54708 1 8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<circle cx="10" cy="11" r="4" fill="black"/>
 </svg>

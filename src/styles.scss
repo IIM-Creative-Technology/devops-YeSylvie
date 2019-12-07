@@ -4,81 +4,74 @@
 @import "./app/sharedStyles/colors.scss";
 
 @font-face {
-    font-family: "Rimouski";
-    src: url(assets/fonts/rimouskisb.ttf) format("opentype");
-  }
-
+  font-family: "Rimouski";
+  src: url(assets/fonts/rimouskisb.ttf) format("opentype");
+}
 
 /* Font-size */
 
 html,
-body{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 16px;
-    font-family: ff-tisa-sans-web-pro, sans-serif;;
+  font-size: 16px;
+  font-family: ff-tisa-sans-web-pro, sans-serif;
 }
 
 p {
-    line-height: 30px;
+  line-height: 30px;
 
-    strong {
-        font-weight: bold;
-    }
-
+  strong {
+    font-weight: bold;
+  }
 }
 
 h1 {
-  font-size: 90px;  
+  font-size: 90px;
   font-family: "Rimouski";
 }
 
 h2 {
-    font-size: 56px;
-    font-family: "Rimouski";
+  font-size: 56px;
+  font-family: "Rimouski";
 }
 
 h3 {
-    font-size: 44.8px;
-    font-family: "Rimouski";
+  font-size: 44.8px;
+  font-family: "Rimouski";
 }
 
 h4 {
-    font-size: 30px;
-    font-family: "Rimouski";
+  font-size: 26px;
+  font-family: "Rimouski";
 }
 
 section {
-    margin-top: 10% ;
+  margin-top: 10%;
 }
 //TODO ADD RESPONSIVE TITLE
 
-
-
-
 .button_primary {
-    @include button($Primary, $PrimaryDark, $PrimaryDarker)
+  @include button($Primary, $PrimaryDark, $PrimaryDarker);
 }
 
 .button_secondary1 {
-    @include button($Secondary1, $Secondary1Dark, $Secondary1Darker)
+  @include button($Secondary1, $Secondary1Dark, $Secondary1Darker);
 }
 
 .button_secondary2 {
-    @include button($Secondary2, $Secondary2Dark, $Secondary2Darker)
+  @include button($Secondary2, $Secondary2Dark, $Secondary2Darker);
 }
 
 .separator {
-    width: 299px;
-    height: 3px;
-    background-color: $Primary;
-    margin: 28px 0;
+  width: 299px;
+  height: 3px;
+  background-color: $Primary;
+  margin: 28px 0;
 }
-
-
