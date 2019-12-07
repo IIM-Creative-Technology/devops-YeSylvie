@@ -29,14 +29,16 @@ import { SocialWallComponent } from './main/social-wall/social-wall.component';
     OfferComponent,
     ValuesComponent,
     DiscoverComponent,
-    SocialWallComponent
+    SocialWallComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ShareModule
+    ShareModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
