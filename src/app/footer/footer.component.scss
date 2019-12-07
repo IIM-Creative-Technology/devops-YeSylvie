@@ -2,6 +2,11 @@
 
 footer {
     background: $Secondary2;
+    padding: 10%;
+    .container {
+        max-width: 1550px;
+    }
+    
     h3 {
         color: $White;
         font-family: rimouski;
@@ -11,9 +16,10 @@ footer {
     }
     .line-white {
         border-left: 2px solid $White;
-      height: 280px;
+      height: 250px;
     
     }
     
 }
+
 
