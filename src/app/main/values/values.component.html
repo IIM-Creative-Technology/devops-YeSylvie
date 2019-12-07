@@ -1,17 +1,8 @@
-<!-- <section class="values-container container">
-    <div class="value-card" *ngFor="let value of values">
-        <img [src]="value.icon" alt="Icône {{value.icon}}">
-        <h4>{{value.title}}</h4>
-        <p [innerHTML]="value.text"></p>
-        <img src="../../../assets/others/decoration-bottom.svg" alt="Vagounette">
-    </div>
-</section> -->
-
 <section id="value">
-    <div class="container">
+    <div class="container overflow-hidden">
         <div class="row text-center">
             <div class="col-md-12">
-                <div class="d-flex flex-md-row flex-sm-column flex-column justify-content-center">
+                <div class="d-flex flex-xl-row flex-lg-column flex-column justify-content-center">
                     <div class="value-card" *ngFor="let value of values">
                         <img [src]="value.icon" alt="Icône {{value.icon}}" class="mb-5 mx-auto">
                         <h4 class="mb-5 mx-auto">{{value.title}}</h4>

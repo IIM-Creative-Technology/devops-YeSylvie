@@ -3,17 +3,17 @@
 .quiz-violet-bloc {
   background: $Secondary2;
   width: 100%;
-height: 256px;
+  height: 256px;
   border-radius: 194.5px 151px 0px 194.5px;
   h2 {
-      color: $Secondary1;
+    color: $Secondary1;
   }
   p {
-      color: $White;
-      font-weight: bold;
+    color: $White;
+    font-weight: bold;
   }
 
-  p:last-child{
+  p:last-child {
     font-style: normal;
     font-weight: normal;
     color: $White;
@@ -31,16 +31,16 @@ height: 256px;
 }
 
 .quiz-suivante {
-    padding-left: 20px;
-    color: $Secondary2;
-    font-style: normal;
-    font-weight: bold;
+  padding-left: 20px;
+  color: $Secondary2;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .quiz-precedent {
-    font-style: normal;
-    font-weight: bold;
-    color: #A5A5A5;
+  font-style: normal;
+  font-weight: bold;
+  color: #a5a5a5;
 }
 
 .input-container {
@@ -49,7 +49,7 @@ height: 256px;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 800px;
-  height: 150px;
+  height: auto;
 
   input {
     width: 350px;
@@ -62,7 +62,43 @@ height: 256px;
   }
 }
 
-.quiz-question h4 { 
-    color: $Secondary2;
-    font-weight: bold;
+.quiz-question h4 {
+  color: $Secondary2;
+  font-weight: bold;
 }
+
+@media (max-width: 575.98px) { 
+  .quiz-violet-bloc-row {
+    padding: 0;
+    .quiz-violet-bloc {
+      background: $Secondary2;
+      border-radius: inherit;
+      height: auto;
+    }
+    .quiz-violet-bloc::after {
+      content: "css";
+      background: $Secondary1;
+  border-radius: 194.5px 194.5px 0px 194.5px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 3542px;
+  height: 159px;
+  color: #a5a5a5;
+    }
+  }
+ }
+
+@media (max-width: 991.98px) {
+  .quiz-violet-bloc {
+    h2 {
+      font-size: 35px;
+    }
+  }
+ }
+
+@media (max-width: 1199.98px) { 
+  .quiz-blue-bloc {
+    display: none;
+  }
+ }
+
+
