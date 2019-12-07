@@ -1,0 +1,19 @@
+@import "../sharedStyles/colors.scss";
+
+footer {
+    background: $Secondary2;
+    h3 {
+        color: $White;
+        font-family: rimouski;
+    }
+    p {
+        color: $White;
+    }
+    .line-white {
+        border-left: 2px solid $White;
+      height: 280px;
+    
+    }
+    
+}
+
