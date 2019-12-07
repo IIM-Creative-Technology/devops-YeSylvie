@@ -23,11 +23,7 @@
                 <div *ngFor="let o of currentQuestionSet.option">
                     <!-- <input type="radio" name="{{currentQuestionSet.id}}" value="{{o.optionid}}"
                         [(ngModel)]="currentQuestionSet.selected" />{{o.name}} -->
-<<<<<<< HEAD
-                    <input name="{{currentQuestionSet.id}}" type="button" class="btn mb-3" value="{{o.name}}" />
-=======
                     <input name="{{currentQuestionSet.id}}" (click)="setAnswser(o.name)" type="button" class="btn" value="{{o.name}}" />
->>>>>>> samy
                 </div>
             </div>
         </div>
