@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialWallComponent implements OnInit {
 
-  private showShareButtons: boolean;
-  private articles: Array<object>;
-  private hideme = []
+   showShareButtons: boolean;
+   articles: Array<object>;
+   hideme = []
   
   constructor() { }
 

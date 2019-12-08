@@ -6,15 +6,15 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./quiz.component.scss"]
 })
 export class QuizComponent implements OnInit {
-  questions: Array<object> = [];
-  currentIndex: number;
-  notAttempted: any;
-  correct: any;
-  currentQuestionSet: any;
-  private answers: Array<string> = [];
-  private currentAnswer: string;
-  private isSelected: boolean = false;
-  private nbAnswers: number = 1;
+   questions: Array<object> = [];
+   currentIndex: number;
+   notAttempted: any;
+   correct: any;
+   currentQuestionSet: any;
+   answers: Array<string> = [];
+   currentAnswer: string;
+   isAnswerSelected: boolean = false;
+   nbAnswers: number = 1;
 
   ngOnInit() {}
 
@@ -73,28 +73,25 @@ export class QuizComponent implements OnInit {
   }
 
   setAnswser(x) {
-    this.isSelected = true;
+    this.isAnswerSelected = true;
     this.currentAnswer = x;
-    console.log(this.currentAnswer);
+    console.log(this.isAnswerSelected);
   }
   next() {
-    if (this.isSelected) {
       this.currentIndex = this.currentIndex + 1;
       this.currentQuestionSet = this.questions[this.currentIndex];
       this.answers.push(this.currentAnswer);
       this.nbAnswers ++;
-      console.log(this.nbAnswers);
-    }
-
-    this.isSelected = false;
+      this.isAnswerSelected = false;
+      console.log(this.answers)
   }
 
   prev() {
     this.currentIndex = this.currentIndex - 1;
     this.currentQuestionSet = this.questions[this.currentIndex];
     this.answers.pop();
-    this.nbAnswers =- 1;
-    console.log(this.nbAnswers);
+    this.nbAnswers --;
+    this.currentAnswer = "";
   }
 
   submit() {

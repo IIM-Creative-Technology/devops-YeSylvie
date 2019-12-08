@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValuesComponent implements OnInit {
 
-  private values: Array<object>;
+   values: Array<object>;
 
   constructor() { }
 
