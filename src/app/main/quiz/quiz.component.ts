@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: "app-quiz",
@@ -17,9 +18,11 @@ export class QuizComponent implements OnInit {
    isAnswerSelected: boolean = false;
    nbAnswers: number = 1;
 
-  ngOnInit() {}
+  ngOnInit() { 
+    this.getResponse();
+  }
 
-  constructor() {
+  constructor(private http: HttpClient) {
     // JSON DATA QUESTIONS/RESPONSE
 
     
@@ -75,11 +78,19 @@ export class QuizComponent implements OnInit {
     this.currentQuestionSet = this.questions[this.currentIndex];
   }
 
+  getResponse() {
+    this.http.post("https://euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( response => {
+      console.log(response);
+    } );
+  }
+
   setAnswser(x) {
     this.isAnswerSelected = true;
     this.currentAnswer = x;
     console.log(this.isAnswerSelected);
   }
+
+
   next() {
       this.currentIndex = this.currentIndex + 1;
       this.currentQuestionSet = this.questions[this.currentIndex];
