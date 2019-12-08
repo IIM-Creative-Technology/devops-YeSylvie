@@ -12,12 +12,12 @@
         </div>
         <div>
             <div class="col-xl-12 text-center mx-auto quiz-question mb-2">
-                <h4>{{currentQuestionSet.question}}</h4>
+                <h4>{{currentQuestionSet?.question}}</h4>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="input-container">
-                <div *ngFor="let o of currentQuestionSet.option; let i =  index">
+                <div *ngFor="let o of currentQuestionSet?.option; let i =  index">
                     <!-- <input type="radio" name="{{currentQuestionSet.id}}" value="{{o.optionid}}"
                         [(ngModel)]="currentQuestionSet.selected" />{{o.name}} -->
                     <input name="{{currentQuestionSet.id}}" (click)="setAnswser(o.name)" type="button" [ngClass]="{'selected' : o.name == currentAnswer, 'btn input-answer' : true, 'v0' : i == 0, 'v1' : i == 1, 'v2' : i == 2, 'v3' : i == 3}" value="{{o.name}}" />
@@ -28,9 +28,13 @@
                 <button class="prev_button" *ngIf="(currentIndex+4) != questions.length" (click)="prev()"><img src="../../../assets/icons/Flèche gauche.svg" alt="Icône flêche vers la droite">Question précédente</button>
                 <button [ngClass]="{'clickable' : isAnswerSelected, 'next_button': true}" *ngIf="(currentIndex+1) != questions.length" [disabled]="!isAnswerSelected" (click)="next()">Question suivante<img src="../../../assets/icons/Flèche droite.svg" alt="Icône flêche vers la droite"></button>
         </div>
-        <div class="row mt-3 mx-auto justify-content-center mt-4" *ngIf="nbAnswers == questions.length">
+        <!-- <div class="row mt-3 mx-auto justify-content-center mt-4" *ngIf="nbAnswers == questions.length">
                 <input type="button" class="button_secondary2" value="Admire ta sélection !" (click)="submit()"/>
+        </div> -->
+        <div class="row mt-3 mx-auto justify-content-center mt-4" *ngIf="true">
+            <input type="button" class="button_secondary2" value="Admire ta sélection !" (click)="submit()"/>
         </div>
     </div>
+    <app-social-wall *ngIf="true" [articles]="articles"></app-social-wall>
 </section>
 

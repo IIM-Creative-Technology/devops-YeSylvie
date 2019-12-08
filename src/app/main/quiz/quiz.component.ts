@@ -14,9 +14,12 @@ export class QuizComponent implements OnInit {
    correct: any;
    currentQuestionSet: any;
    answers: Array<string> = [];
+   articles: Array<object> = [];
    currentAnswer: string;
    isAnswerSelected: boolean = false;
    nbAnswers: number = 1;
+   showSocialWall: boolean = false;
+   offset: number = 0;
 
   ngOnInit() { 
     this.getResponse();
@@ -25,7 +28,17 @@ export class QuizComponent implements OnInit {
   constructor(private http: HttpClient) {
     // JSON DATA QUESTIONS/RESPONSE
 
-    
+    this.articles = [
+      {
+        id: 0,
+        titre: "Title 1",
+        url: "https://fr.wikipedia.org/wiki/Bob_Ross", 
+        source: "Insta",
+        nom_img: "https://i.ytimg.com/vi/rDs3o1uLEdU/maxresdefault.jpg",
+        date: "15 février 2019",
+        tag: ["truc", "machin", "chouette"]
+      }
+    ];
 
     this.questions = [
       {
@@ -79,8 +92,10 @@ export class QuizComponent implements OnInit {
   }
 
   getResponse() {
-    this.http.post("https://euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( response => {
-      console.log(response);
+    this.http.post("https://euphoriart.fr/hommage/getSocialWall.php", [this.answers, this.offset]).subscribe( response => {
+      response[0].forEach(element => {
+        this.articles.push(element)
+      });
     } );
   }
 
