@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-quiz",
   templateUrl: "./quiz.component.html",
   styleUrls: ["./quiz.component.scss"]
 })
+
 export class QuizComponent implements OnInit {
    questions: Array<object> = [];
    currentIndex: number;
@@ -20,6 +21,8 @@ export class QuizComponent implements OnInit {
 
   constructor() {
     // JSON DATA QUESTIONS/RESPONSE
+
+    
 
     this.questions = [
       {

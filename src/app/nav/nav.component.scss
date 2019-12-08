@@ -38,7 +38,8 @@
 // }
 
 nav {
-  top: 21px;
+  width: 100%;
+  transition: 0.3s ease all;
   .nav-item {
     padding-left: 30px;
     color: $White;
@@ -49,4 +50,24 @@ nav {
   .nav-link {
     color: $White;
   }
+}
+
+#logo {
+  content:url("../../assets/logos/logo_desktop-white.svg");
+
+
+  @media screen and (max-width: 600px) {
+    content: url("../../assets/logos/logo_mobile-white.svg");
+  }
+}
+
+
+.scrolled {
+  .nav-link {
+    color: $DefaultBlack !important;
+  }
+}
+
+.test {
+  width: 150px;
 }
