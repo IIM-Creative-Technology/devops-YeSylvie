@@ -7,6 +7,7 @@ section {
     
     img {
         padding: 0 5% 0 5%;
+        filter: brightness(0) saturate(0%) invert(100%);
     }
     .dot {
         height: 55px;
@@ -16,8 +17,7 @@ section {
         margin: 0 6% 0 6%;
         line-height: 60px;
         text-align: center;
-        
-        img {
-        }
       }
 }
+
+

@@ -9,6 +9,8 @@ p {
     line-height: 30px;
 }
 
-p {
-    line-height: 30px;
+@media (max-width: 767.98px) {
+    img {
+        display: none;
+    }
 }
