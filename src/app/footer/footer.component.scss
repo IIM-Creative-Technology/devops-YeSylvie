@@ -26,11 +26,13 @@ footer {
 
     .detail-card {
         margin-left: 20%;
+
+        img {
+            filter: brightness(0) saturate(0%) invert(100%);
+        }
     }
 
-    svg {
-        width: 150px;
-    }
+    
 }
 
 
