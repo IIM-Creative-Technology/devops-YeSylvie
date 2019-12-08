@@ -16,10 +16,23 @@ footer {
     }
     .line-white {
         border-left: 2px solid $White;
-      height: 250px;
+      height: 260px;
     
     }
     
+    img {
+        padding: 7px 10px 0 0;
+    }
+
+    .detail-card {
+        margin-left: 20%;
+    }
+
+    svg {
+        width: 150px;
+    }
 }
+
+
 
 
