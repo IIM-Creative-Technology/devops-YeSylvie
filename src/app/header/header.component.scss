@@ -50,3 +50,14 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 675px) {
+  .content-wrapper {
+    padding: 0 20px;
+    margin-bottom: 100px !important;
+
+    button {
+      margin: 0 auto;
+    }
+  }
+}
