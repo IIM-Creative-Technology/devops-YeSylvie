@@ -1,40 +1,44 @@
 @import "../sharedStyles/colors.scss";
 
-footer {
-    background: $Secondary2;
-    padding: 10%;
-    .container {
-        max-width: 1550px;
-    }
-    
-    h3 {
-        color: $White;
-        font-family: rimouski;
-    }
-    p {
-        color: $White;
-    }
-    .line-white {
-        border-left: 2px solid $White;
-      height: 260px;
-    
-    }
-    
-    img {
-        padding: 7px 10px 0 0;
-    }
-
-    .detail-card {
-        margin-left: 20%;
-
-        img {
-            filter: brightness(0) saturate(0%) invert(100%);
-        }
-    }
-
-    
+#content {
+    position: relative;
 }
 
+#content::before {
+  content: url("../../assets/others/decoration-footer.svg");
+  position: absolute;
+  right : 0px;
+  top: -245px;
+}
 
+footer {
+  background: $Secondary2;
+  padding: 10%;
+  .container {
+    max-width: 1550px;
+  }
 
+  h3 {
+    color: $White;
+    font-family: rimouski;
+  }
+  p {
+    color: $White;
+  }
+  .line-white {
+    border-left: 2px solid $White;
+    height: 260px;
+  }
 
+  img {
+    padding: 7px 10px 0 0;
+  }
+
+  .detail-card {
+    margin-left: 20%;
+
+    img {
+      filter: brightness(0) saturate(0%) invert(100%);
+    }
+  }
+}
