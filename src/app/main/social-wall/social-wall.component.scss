@@ -1,8 +1,11 @@
 @import "../../sharedStyles/colors.scss";
+@import "../../sharedStyles/animations.scss";
+
 
 #social-wall {
   background-color: $DefaultBlack;
   padding: 160px 0;
+  animation: fadeup 0.5s ease;
 
   .content-wrapper {
     display: flex;
@@ -14,7 +17,7 @@
     flex-wrap: wrap;
 
     .social-wall_card {
-      width: 350px;
+      width: 325px;
       height: auto;
       min-height: 300px;
       margin: 15px 10px;
@@ -39,7 +42,7 @@
       // }
 
       .preview-image_wrapper {
-        width: 350px;
+        width: 325px;
         height: 220px;
         background-color: black;
         border-radius: 10px 10px 0 0;
@@ -64,6 +67,7 @@
         align-items: center;
         border-bottom: 1px solid $GreyLight;
         position: relative;
+        
 
         .source-article_icon {
           width: 60px;
@@ -180,7 +184,7 @@
       padding: 0 20px;
       &::after {
         content: "";
-        width: 350px;
+        width: 325px;
         height: auto;
         min-height: 300px;
         margin: 15px 10px;

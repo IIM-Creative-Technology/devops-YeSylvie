@@ -20,6 +20,7 @@ export class QuizComponent implements OnInit {
    nbAnswers: number = 1;
    showSocialWall: boolean = false;
    offset: number = 0;
+   showQuiz: boolean = true;
 
   ngOnInit() { 
     this.getResponse();
@@ -124,6 +125,7 @@ export class QuizComponent implements OnInit {
   }
 
   submit() {
+    this.showQuiz = false;
     this.currentIndex = 0;
     this.currentQuestionSet = this.questions[this.currentIndex];
   }
