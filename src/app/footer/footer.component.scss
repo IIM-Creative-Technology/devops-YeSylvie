@@ -15,7 +15,7 @@ footer {
   background: $Secondary2;
   padding: 10%;
   .container {
-    max-width: 1550px;
+    max-width: 1390px;
   }
 
   h3 {
@@ -36,15 +36,17 @@ footer {
 
   .line-white {
     border-left: 2px solid $White;
-    height: 260px;
+    height: 240px;
   }
 
   img {
-    padding: 7px 10px 0 0;
+    margin-right: 10px;
+    top: 5px;
+    position: relative;
   }
 
   .detail-card {
-    margin-left: 20%;
+    margin-left: 3%;
 
     img {
       filter: brightness(0) saturate(0%) invert(100%);
@@ -124,3 +126,15 @@ footer {
     background: $DefaultBlack;
   }
 }
+@media (max-width: 1199.98px) { 
+  .row {
+    margin-top: 15%;
+  }
+  .footer-card {
+   margin-bottom: 15%;
+  }
+
+  .cards-footer {
+    margin-bottom: 15%;
+  }
+ }

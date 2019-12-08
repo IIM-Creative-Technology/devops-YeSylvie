@@ -4,7 +4,7 @@
                 <div class="quiz-violet-bloc">
                     <h2 class="">Définissons ta sélection</h2>
                     <p class="">Et si nous participions à un petit jeu ? </p>
-                    <p>Voici ci-dessous une série de questions portant sur tes goûts artistiques. Une fois terminé, nous te proposerons un ensemble de inserrez le bon mot sélectionné  par nos soins ! </p>
+                    <p>Voici ci-dessous une série de questions portant sur tes goûts artistiques. Une fois terminé, nous te proposerons un ensemble d'articles sélectionnés  par nos soins ! </p>
     
                 </div>
 
@@ -17,9 +17,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="input-container">
-                <div *ngFor="let o of currentQuestionSet?.option; let i =  index">
-                    <!-- <input type="radio" name="{{currentQuestionSet.id}}" value="{{o.optionid}}"
-                        [(ngModel)]="currentQuestionSet.selected" />{{o.name}} -->
+                <div *ngFor="let o of currentQuestionSet.option; let i =  index">
                     <input name="{{currentQuestionSet.id}}" (click)="setAnswser(o.name)" type="button" [ngClass]="{'selected' : o.name == currentAnswer, 'btn input-answer' : true, 'v0' : i == 0, 'v1' : i == 1, 'v2' : i == 2, 'v3' : i == 3}" value="{{o.name}}" />
                 </div>
             </div>
