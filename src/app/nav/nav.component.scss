@@ -27,6 +27,22 @@ nav {
   .nav-link {
     color: $DefaultBlack !important;
   }
+  #logo {
+    content: url("../../assets/logos/logo_desktop.svg");
+    @media screen and (max-width: 600px) {
+      content: url("../../assets/logos/logo_mobile.svg");
+    }
+  }  
+
+  #hamburger {
+    filter: saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
+
+  }
+  
+}
+
+#hamburger {
+  filter: brightness(0) saturate(0%) invert(100%);
 }
 
 .test {
