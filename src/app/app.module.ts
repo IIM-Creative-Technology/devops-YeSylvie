@@ -38,7 +38,6 @@ import { SocialWallComponent } from './main/social-wall/social-wall.component';
     HttpClientModule,
     FormsModule,
     ShareModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
