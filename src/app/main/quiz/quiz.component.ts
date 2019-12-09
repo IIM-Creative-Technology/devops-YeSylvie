@@ -185,8 +185,18 @@ export class QuizComponent implements OnInit {
     this.currentQuestionSet = this.questions[this.currentIndex];
 
     // URL pour le local : http://localhost/hommage/api/getSocialWall.php
-    this.http.post("https://www.euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( response => {
-        console.log(response);
-      } ) ;
+    this.http.post("https://www.euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( 
+      data => {
+        let length = Object.keys(data).length;
+        console.log(length);
+        for (let index = 0; index < length; index++) {
+          this.articles.push(data[index]) 
+          
+        }
+        console.log(this.articles)
+      },
+      error => {
+        console.log("Error : ", error);
+      }) ;
   }
 }
