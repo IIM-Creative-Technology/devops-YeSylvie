@@ -24,4 +24,9 @@ export class SocialWallComponent implements OnInit {
     this.hideme.fill(false)
     this.hideme[x] = !currentState;
   }
+
+  getTwitterUrl(x:string) {
+    console.log("'" + x + "'")
+    return "'" + x + "'";
+  }
 }

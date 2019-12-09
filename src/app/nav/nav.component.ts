@@ -21,13 +21,13 @@ export class NavComponent implements OnInit {
         if (!nav.classList.contains('scrolled')) {
           nav.classList.add('scrolled');
           logo.setAttribute('src', '../../assets/logos/logo_desktop.svg');
-          hamburger.setAttribute('src', '../../assets/icons/Hamburger.svg');
+          hamburger.setAttribute('src', '../../assets/icons/hamburger.svg');
         }
       } else {
         nav.style.backgroundColor = 'transparent';
         if (nav.classList.contains('scrolled')) {
           nav.classList.remove('scrolled');
-          hamburger.setAttribute('src', '../../assets/icons/Hamburger.svg');
+          hamburger.setAttribute('src', '../../assets/icons/hamburger.svg');
         }
       }
 });

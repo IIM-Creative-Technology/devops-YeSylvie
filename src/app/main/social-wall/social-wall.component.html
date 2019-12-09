@@ -1,14 +1,14 @@
 <section id="social-wall">
-  <!-- <div class="content-wrapper">
+  <div class="content-wrapper">
     <div class="social-wall_card" *ngFor="let article of articles">
       <a [href]="article.url | safe: 'url'" target="_blanck">
         <div class="preview-image_wrapper">
           <div class="preview_image"  [ngStyle]="{'backgroundImage':'url(' + article.nom_img + ')'}"></div>
         </div>
         <div class="title_container">
-            <button class="source-article_icon">
-                <img src="../../../assets/icons/Logo FB.svg" alt="">
-            </button>
+            <div class="source-article_icon">
+                <img src="../../../assets/icons/facebook.svg" alt="">
+            </div>
           <h5>{{ article.titre }}</h5>
         </div>
       </a>
@@ -19,13 +19,19 @@
           <div class="social-buttons_container" [hidden]="!hideme[article.id]" >
             <button class="social-media_button facebook" [url]="article.url" shareButton="facebook">
               <img
-                src="../../../assets/icons/Logo FB.svg"
+                src="../../../assets/icons/facebook.svg"
                 alt="Icône Facebook"
               />
             </button>
-            <button class="social-media_button twitter" [url]="article.url | safe: 'url'" shareButton="twitter">
+            <button class="social-media_button twitter" url="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
               <img
-                src="../../../assets/icons/Logo Twitter.svg"
+                src="../../../assets/icons/twitter.svg"
+                alt="Icône Twitter"
+              />
+            </button>
+            <button class="social-media_button twitter" shareButton="copy">
+              <img
+                src="../../../assets/icons/twitter.svg"
                 alt="Icône Twitter"
               />
             </button>
@@ -36,5 +42,5 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </section>
