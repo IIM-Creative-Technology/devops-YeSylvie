@@ -23,7 +23,7 @@
                 alt="Icône Facebook"
               />
             </button>
-            <button class="social-media_button twitter" url="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
+            <button class="social-media_button twitter" [url]="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
               <img
                 src="../../../assets/icons/twitter.svg"
                 alt="Icône Twitter"
@@ -37,7 +37,7 @@
             </button>
           </div>
           <button (click)="show(article.id)" class="share_button">
-            <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
+            <img src="../../../assets/icons/share.svg" alt="Icône de partage" />
           </button>
         </div>
       </div>

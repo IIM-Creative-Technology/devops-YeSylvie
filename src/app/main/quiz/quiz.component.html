@@ -13,7 +13,7 @@
 
       <div class="quiz-blue-bloc"></div>
     </div>
-    <div *ngIf="show" [@enterAnimation]>
+    <div class="quiz-container" *ngIf="show" [@enterAnimation]>
       <div>
         <div class="col-xl-12 text-center mx-auto quiz-question mb-2">
           <h4>{{ currentQuestionSet?.question }}</h4>
@@ -53,7 +53,7 @@
           (click)="prev()"
         >
           <img
-            src="../../../assets/icons/Flèche gauche.svg"
+            src="../../../assets/icons/arrow-left.svg"
             alt="Icône flêche vers la droite"
           />Question précédente
         </button>
@@ -78,10 +78,13 @@
           class="button_secondary2"
           value="Admire ta sélection !"
           (click)="submit()"
+          (click)="show = !show"
         />
       </div>
       <!-- <h3 *ngIf="!show" [@enterAnimation] class="your-selection_title">Voici ta séléction !</h3> -->
     </div>
   </div>
 </section>
-<app-social-wall [@socialWall] [articles]="articles"></app-social-wall>
+<div class="social-wrapper" *ngIf="!show" [@socialWall]>
+  <app-social-wall [articles]="articles"></app-social-wall>
+</div>

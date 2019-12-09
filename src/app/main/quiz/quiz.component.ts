@@ -16,19 +16,19 @@ import { trigger, style, animate, transition } from '@angular/animations';
         ]),
         transition(':leave', [
           style({transform: 'scaleY(0)', opacity: 1}),
-          animate('5500ms', style({transform: 'scaleY(0)', opacity: 0}))
+          animate('500ms', style({transform: 'scaleY(0)', opacity: 0}))
         ])
       ],
     ),
     trigger(
       'socialWall', [
         transition(':enter', [
-          style({transform: 'translateY(100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateY(0)', opacity: 1}))
+          style({opacity: 0}),
+          animate('500ms', style({opacity: 1}))
         ]),
         transition(':leave', [
-          style({transform: 'translateY(0)', opacity: 1}),
-          animate('500ms', style({transform: 'translateY(-200px)', opacity: 0}))
+          style({opacity: 1}),
+          animate('500ms', style({opacity: 0}))
         ])
       ],
     )
@@ -111,7 +111,7 @@ export class QuizComponent implements OnInit {
           {
             optionid: 4,
             name:
-              "Classique, jazz, blues, rock, rap,... La musique c'est le sang",
+              "Classique, jazz, rock, rap,... La musique c'est le sang",
             tag: "musique"
           }
         ],

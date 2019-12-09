@@ -3,8 +3,7 @@
 
 #social-wall {
   background-color: $DefaultBlack;
-  padding: 160px 0;
-  margin-top: 50px;
+  padding: 80px 0;
   animation: fadeup 0.5s ease;
 
   .content-wrapper {
@@ -96,6 +95,7 @@
           text-decoration: none !important;
           border: none !important;
           text-align: center;
+          margin: 0 20px;
         }
       }
 
@@ -117,11 +117,11 @@
           .social-buttons_container {
             position: absolute;
             top: -70px;
-            left: -40px;
+            left: -60px;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            width: 120px;
+            width: 160px;
 
             .social-media_button {
               display: flex;
@@ -165,11 +165,11 @@
   }
 
   @media screen and (max-width: 820px) {
-    padding: 160px 25px !important;
+    padding: 80px 25px !important;
   }
 
   @media screen and (max-width: 1400px) {
-    padding: 160px 50px;
+    padding: 80px 50px;
 
     .content-wrapper {
       justify-content: space-around;

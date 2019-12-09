@@ -1,7 +1,7 @@
 @import "../../sharedStyles/colors.scss";
 @import "../../sharedStyles/buttons.scss";
 
-.about-us-text {
+.a-propos-text {
   h2 {
     color: $Primary;
   }
@@ -45,7 +45,7 @@
  }
 
  @media (min-width: 992px) and (max-width: 1199.98px) { 
-   .about-us-text {
+   .a-propos-text {
      width: 80%;
      margin: 5% 0 0 10%;
    }

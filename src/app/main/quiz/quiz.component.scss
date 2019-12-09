@@ -51,6 +51,10 @@
   line-height: 191px;
 }
 
+.quiz-container {
+  margin-bottom: 50px;
+}
+
 .prev_button,
 .next_button {
   background-color: white;
@@ -65,7 +69,7 @@
   font-weight: bold;
   transition: 0.3s ease all;
   position: relative;
-  left: -5px;
+  left: 9px;
 
   &.clickable {
     color: $Secondary2;
@@ -119,21 +123,22 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 900px;
   width: 90%;
   height: 120px;
   animation: fade-up ease 1s;
 
   /* Button specification zone */
   .input-answer {
-    width: 380px;
-    background: $Secondary1;
+    width: 400px;
+    background: $Secondary1Dark;
     color: #ffffff;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 21px;
     transition: background-color 0.2s ease;
+    overflow-wrap: break-word;
 
     &:hover {
       background-color: $Secondary1Dark;
@@ -181,7 +186,7 @@
   .v1,
   .v2,
   .v3 {
-    border-radius: 0 !important;
+    border-radius: 400px !important;
     margin: 0 0 10px 0 !important;
   }
 
