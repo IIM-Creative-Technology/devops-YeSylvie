@@ -32,10 +32,10 @@ export class QuizComponent implements OnInit {
         id: 1,
         question: "Pour toi l'Art c'est :",
         option: [
-          { optionid: 1, name: "Peintures, toiles et musées", tag : "#peinture" },
-          { optionid: 2, name: "Instants figés dans le temps avec la photographie", tag : "#photographie" },
-          { optionid: 3, name: "Crayons et carnets blanc pour le dessin", tag : "#dessin" },
-          { optionid: 4, name: "Belles lettres, belles phrases avec la littérature", tag : "#littérature" }
+          { optionid: 1, name: "Peintures, toiles et musées", tag : "peinture" },
+          { optionid: 2, name: "Instants figés dans le temps avec la photographie", tag : "photographie" },
+          { optionid: 3, name: "Crayons et carnets blanc pour le dessin", tag : "dessin" },
+          { optionid: 4, name: "Belles lettres, belles phrases avec la littérature", tag : "littérature" }
         ],
         selected: 0
       },
@@ -43,10 +43,10 @@ export class QuizComponent implements OnInit {
         id: 2,
         question: "Tu es plutôt… ",
         option: [
-          { optionid: 1, name: "Un(e) vrai(e) gamer(euse) !", tag : "#game" },
-          { optionid: 2, name: "Branché(e) musique", tag : "#musique" },
-          { optionid: 3, name: "Team Otaku", tag : "#otaku" },
-          { optionid: 4, name: "Séries et cocooning", tag : "#serie" }
+          { optionid: 1, name: "Un(e) vrai(e) gamer(euse) !", tag : "game" },
+          { optionid: 2, name: "Branché(e) musique", tag : "musique" },
+          { optionid: 3, name: "Team Otaku", tag : "otaku" },
+          { optionid: 4, name: "Séries et cocooning", tag : "serie" }
         ],
         selected: 0
       },
@@ -54,10 +54,10 @@ export class QuizComponent implements OnInit {
         id: 3,
         question: "Si je te dis arts du spectacle, tu me réponds ?",
         option: [
-          { optionid: 1, name: "Salle noire, grand écran et pop corn : le cinéma quoi !", tag : "#cinema" },
-          { optionid: 2, name: "Un(e) magicien(ne) ne dévoile jamais ses secrets.. ", tag : "#magie" },
-          { optionid: 3, name: "La danse pour avoir le rythme dans la peau ", tag : "#danse" },
-          { optionid: 4, name: "Classique, jazz, blues, rock, rap,... La musique c'est le sang", tag : "#musique" }
+          { optionid: 1, name: "Salle noire, grand écran et pop corn : le cinéma quoi !", tag : "cinema" },
+          { optionid: 2, name: "Un(e) magicien(ne) ne dévoile jamais ses secrets.. ", tag : "magie" },
+          { optionid: 3, name: "La danse pour avoir le rythme dans la peau ", tag : "danse" },
+          { optionid: 4, name: "Classique, jazz, blues, rock, rap,... La musique c'est le sang", tag : "musique" }
         ],
         selected: 0
       },
@@ -65,10 +65,10 @@ export class QuizComponent implements OnInit {
         id: 4,
         question: "Ce que tu préfères dans l’Art c’est :",
         option: [
-          { optionid: 1, name: "Ne pas toujours comprendre ce que tu vois", tag : "#abstrait" },
-          { optionid: 2, name: "Ressentir plein d’émotions différentes", tag : "#emotion" },
-          { optionid: 3, name: "Comprendre tout de suite ce que tu vois", tag : "#realisme" },
-          { optionid: 4, name: "Qu'il soit spectaculaire", tag : "#spectaculaire" }
+          { optionid: 1, name: "Ne pas toujours comprendre ce que tu vois", tag : "abstrait" },
+          { optionid: 2, name: "Ressentir plein d’émotions différentes", tag : "emotion" },
+          { optionid: 3, name: "Comprendre tout de suite ce que tu vois", tag : "realisme" },
+          { optionid: 4, name: "Qu'il soit spectaculaire", tag : "spectaculaire" }
         ],
         selected: 0
       }
