@@ -4,6 +4,7 @@
 #social-wall {
   background-color: $DefaultBlack;
   padding: 80px 0;
+  margin-top: 70px;
   animation: fadeup 0.5s ease;
 
   .content-wrapper {
@@ -179,13 +180,6 @@
   @media screen and (min-width:960px) and (max-width: 1308px)  {
     .content-wrapper {
       padding: 0 20px;
-      &::after {
-        content: "";
-        width: 325px;
-        height: auto;
-        min-height: 300px;
-        margin: 15px 10px;
-      }
     }
   }
 
