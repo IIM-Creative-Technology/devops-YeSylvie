@@ -151,18 +151,7 @@ export class QuizComponent implements OnInit {
   }
 
   getResponse() {
-    this.http
-      .post("https://euphoriart.fr/hommage/getSocialWall.php", [
-        this.answers,
-        this.offset
-      ])
-      .subscribe(response => {
-        if (response && response != undefined) {
-          response[0].forEach(element => {
-            this.articles.push(element);
-          });
-        }
-      });
+    
   }
 
   setAnswser(x) {
@@ -194,6 +183,10 @@ export class QuizComponent implements OnInit {
     this.showQuiz = false;
     this.currentIndex = 0;
     this.currentQuestionSet = this.questions[this.currentIndex];
-    // this.getResponse()
+
+    // URL pour le local : http://localhost/hommage/api/getSocialWall.php
+    this.http.post("https://www.euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( response => {
+        console.log(response);
+      } ) ;
   }
 }
