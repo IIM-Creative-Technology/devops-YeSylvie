@@ -18,6 +18,7 @@ import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
 import { DiscoverComponent } from './main/discover/discover.component';
 import { SocialWallComponent } from './main/social-wall/social-wall.component';
+import { SafePipe } from './safe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { SocialWallComponent } from './main/social-wall/social-wall.component';
     ValuesComponent,
     DiscoverComponent,
     SocialWallComponent,
+    SafePipe,
 
   ],
   imports: [

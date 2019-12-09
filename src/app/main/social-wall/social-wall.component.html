@@ -1,7 +1,7 @@
 <section id="social-wall">
-  <div class="content-wrapper">
+  <!-- <div class="content-wrapper">
     <div class="social-wall_card" *ngFor="let article of articles">
-      <a [href]="article.url" target="_blanck">
+      <a [href]="article.url | safe: 'url'" target="_blanck">
         <div class="preview-image_wrapper">
           <div class="preview_image"  [ngStyle]="{'backgroundImage':'url(' + article.nom_img + ')'}"></div>
         </div>
@@ -23,7 +23,7 @@
                 alt="Icône Facebook"
               />
             </button>
-            <button class="social-media_button twitter" [url]="article.url" shareButton="twitter">
+            <button class="social-media_button twitter" [url]="article.url | safe: 'url'" shareButton="twitter">
               <img
                 src="../../../assets/icons/Logo Twitter.svg"
                 alt="Icône Twitter"
@@ -36,5 +36,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
