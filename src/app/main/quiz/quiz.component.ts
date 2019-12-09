@@ -44,45 +44,45 @@ export class QuizComponent implements OnInit {
     this.questions = [
       {
         id: 1,
-        question: "Quel est ton dessert favori ?",
+        question: "Pour toi l'Art c'est :",
         option: [
-          { optionid: 1, name: "Tiramisu" },
-          { optionid: 2, name: "Glace" },
-          { optionid: 3, name: "Perle de coco" },
-          { optionid: 4, name: "Gateau au chocolat" }
+          { optionid: 1, name: "Peintures, toiles et musées", tag : "peinture" },
+          { optionid: 2, name: "Instants figés dans le temps avec la photographie", tag : "photographie" },
+          { optionid: 3, name: "Crayons et carnets blanc pour le dessin", tag : "dessin" },
+          { optionid: 4, name: "Belles lettres, belles phrases avec la littérature", tag : "littérature" }
         ],
         selected: 0
       },
       {
         id: 2,
-        question: "Quel est ton sport favori ?",
+        question: "Tu es plutôt… ",
         option: [
-          { optionid: 1, name: "foot" },
-          { optionid: 2, name: "tennis" },
-          { optionid: 3, name: "eff" },
-          { optionid: 4, name: "ze" }
+          { optionid: 1, name: "Un(e) vrai(e) gamer(euse) !", tag : "game" },
+          { optionid: 2, name: "Branché(e) musique", tag : "musique" },
+          { optionid: 3, name: "Team Otaku", tag : "otaku" },
+          { optionid: 4, name: "Séries et cocooning", tag : "serie" }
         ],
         selected: 0
       },
       {
         id: 3,
-        question: "Quel est ton acteur favori ?",
+        question: "Si je te dis arts du spectacle, tu me réponds ?",
         option: [
-          { optionid: 1, name: "zef" },
-          { optionid: 2, name: "zae" },
-          { optionid: 3, name: "zae" },
-          { optionid: 4, name: "fffff" }
+          { optionid: 1, name: "Salle noire, grand écran et pop corn : le cinéma quoi !", tag : "cinema" },
+          { optionid: 2, name: "Un(e) magicien(ne) ne dévoile jamais ses secrets.. ", tag : "magie" },
+          { optionid: 3, name: "La danse pour avoir le rythme dans la peau ", tag : "danse" },
+          { optionid: 4, name: "Classique, jazz, blues, rock, rap,... La musique c'est le sang", tag : "musique" }
         ],
         selected: 0
       },
       {
         id: 4,
-        question: "Quel est ton groupe favori ?",
+        question: "Ce que tu préfères dans l’Art c’est :",
         option: [
-          { optionid: 1, name: "vzzzzee" },
-          { optionid: 2, name: "ez" },
-          { optionid: 3, name: "Perle de coco" },
-          { optionid: 4, name: "Gateau audz chocolat" }
+          { optionid: 1, name: "Ne pas toujours comprendre ce que tu vois", tag : "abstrait" },
+          { optionid: 2, name: "Ressentir plein d’émotions différentes", tag : "emotion" },
+          { optionid: 3, name: "Comprendre tout de suite ce que tu vois", tag : "realisme" },
+          { optionid: 4, name: "Qu'il soit spectaculaire", tag : "spectaculaire" }
         ],
         selected: 0
       }
