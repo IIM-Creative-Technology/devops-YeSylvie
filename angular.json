@@ -29,11 +29,13 @@
             ],
             "styles": [
               "../hommage/node_modules/bootstrap/dist/css/bootstrap.css",
+              "../hommage/node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
             "scripts": [
               "../hommage/node_modules/jquery/dist/jquery.min.js",
-              "../hommage/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "../hommage/node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "../hommage/node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {

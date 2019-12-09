@@ -13,7 +13,7 @@
 
       <div class="quiz-blue-bloc"></div>
     </div>
-    <div *ngIf="showQuiz">
+    <div *ngIf="show" [@enterAnimation] >
       <div>
         <div class="col-xl-12 text-center mx-auto quiz-question mb-2">
           <h4>{{ currentQuestionSet?.question }}</h4>
@@ -24,10 +24,10 @@
           <div *ngFor="let o of currentQuestionSet.option; let i = index">
             <input
               name="{{ currentQuestionSet.id }}"
-              (click)="setAnswser(o.name)"
+              (click)="setAnswser(o.tag)"
               type="button"
               [ngClass]="{
-                selected: o.name == currentAnswer,
+                selected: o.tag == currentAnswer,
                 'btn input-answer': true,
                 v0: i == 0,
                 v1: i == 1,
@@ -72,9 +72,13 @@
           class="button_secondary2"
           value="Admire ta sélection !"
           (click)="submit()"
+          (click)="show = !show"
         />
       </div>
     </div>
+    <!-- <h3 *ngIf="!show" [@enterAnimation] class="your-selection_title">Voici ta séléction !</h3> -->
   </div>
-  <app-social-wall *ngIf="true" [articles]="articles"></app-social-wall>
+  <div *ngIf="!show">
+      <app-social-wall  [@socialWall] [articles]="articles"></app-social-wall>
+  </div>
 </section>

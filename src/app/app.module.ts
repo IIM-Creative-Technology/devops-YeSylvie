@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ShareModule } from '@ngx-share/core';
+import { NgwWowModule } from 'ngx-wow';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { SocialWallComponent } from './main/social-wall/social-wall.component';
     HttpClientModule,
     FormsModule,
     ShareModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

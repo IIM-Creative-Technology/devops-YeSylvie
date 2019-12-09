@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-constructor() {
+constructor(private wowService: NgwWowService) {
 }
 
+ngOnInit() {
+  this.wowService.init()
+}
 
 }
 
