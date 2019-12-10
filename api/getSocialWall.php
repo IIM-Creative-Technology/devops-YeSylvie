@@ -23,7 +23,7 @@ $requete = $bdd -> query("SELECT DISTINCT sw.id, sw.titre, sw.source, sw.url, sw
 FROM tag t
 INNER JOIN social_wall_tag swt ON t.id=swt.tag_id
 INNER JOIN social_wall sw ON sw.id=swt.social_wall_id   
-WHERE t.libelle_tag IN ('$tags') ");  
+WHERE t.libelle_tag IN ('$tags') ORDER BY RAND() ");  
 
 while($reponse = $requete->fetch()) {
 
