@@ -16,7 +16,7 @@
         <div class="date">{{ article.date }}</div>
 
         <div class="share-buttons_container">
-          <div class="social-buttons_container" [hidden]="!hideme[article.id]" >
+          <div class="social-buttons_container" [@showShare] *ngIf="hideme[article.id]" >
             <button class="social-media_button facebook" [url]="article.url" shareButton="facebook">
               <img
                 src="../../../assets/icons/facebook.svg"
@@ -37,7 +37,7 @@
             </button>
           </div>
           <button (click)="show(article.id)" class="share_button">
-            <img src="../../../assets/icons/Share.svg" alt="Icône de partage" />
+            <img src="../../../assets/icons/share.svg" alt="Icône de partage" />
           </button>
         </div>
       </div>
