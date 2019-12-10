@@ -7,7 +7,7 @@
         </div>
         <div class="title_container">
             <div class="source-article_icon">
-                <img src="../../../assets/icons/facebook.svg" alt="">
+                <img src="../../../assets/icons/facebook.svg" alt="Icône Facebook">
             </div>
           <h5>{{ article.titre }}</h5>
         </div>
@@ -16,22 +16,22 @@
         <div class="date">{{ article.date }}</div>
 
         <div class="share-buttons_container">
-          <div class="social-buttons_container" [hidden]="!hideme[article.id]" >
+          <div class="social-buttons_container" [@showShare] *ngIf="hideme[article.id]" >
             <button class="social-media_button facebook" [url]="article.url" shareButton="facebook">
               <img
                 src="../../../assets/icons/facebook.svg"
                 alt="Icône Facebook"
               />
             </button>
-            <button class="social-media_button twitter" [url]="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
+            <!-- <button class="social-media_button twitter" [url]="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
               <img
                 src="../../../assets/icons/twitter.svg"
                 alt="Icône Twitter"
               />
-            </button>
-            <button class="social-media_button twitter" shareButton="copy">
+            </button> -->
+            <button class="social-media_button copy" shareButton="copy">
               <img
-                src="../../../assets/icons/twitter.svg"
+                src="../../../assets/icons/copylink.svg"
                 alt="Icône Twitter"
               />
             </button>

@@ -1,9 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-social-wall',
   templateUrl: './social-wall.component.html',
-  styleUrls: ['./social-wall.component.scss']
+  styleUrls: ['./social-wall.component.scss'],
+  animations: [
+    trigger(
+      'showShare', [
+        transition(':enter', [
+          style({transform: 'translateY(50%)', opacity: 0}),
+          animate('200', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('200', style({transform: 'translateY(50%)', opacity: 0}))
+        ])
+      ],
+    )
+  ]
 })
 export class SocialWallComponent implements OnInit {
   @Input() articles: Array<string>;
@@ -26,7 +41,6 @@ export class SocialWallComponent implements OnInit {
   }
 
   getTwitterUrl(x:string) {
-    console.log("'" + x + "'")
     return "'" + x + "'";
   }
 }
