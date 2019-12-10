@@ -36,11 +36,6 @@
           0px 64px 64px rgba(0, 0, 0, 0.07);
       }
 
-      // &:hover .preview_image,
-      // &:focus .preview_image {
-      //     transform: scale(1.05);
-      // }
-
       .preview-image_wrapper {
         width: 325px;
         height: 220px;
@@ -118,11 +113,11 @@
           .social-buttons_container {
             position: absolute;
             top: -70px;
-            left: -60px;
+            left: -35px;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            width: 160px;
+            width: 100px;
 
             .social-media_button {
               display: flex;
@@ -141,10 +136,30 @@
 
             .social-media_button.facebook {
               background-color: #3b5998;
+
+              &:hover {
+                background-color: darken($color: #3b5998, $amount: 10);
+              }
+
+              &:active {
+                background-color: darken($color: #3b5998, $amount: 20);
+              }
             }
 
             .social-media_button.twitter {
               background-color: #1da1f2;
+            }
+
+            .social-media_button.copy {
+              background-color: $Secondary2;
+
+              &:hover {
+                background-color: $Secondary2Dark;
+              }
+
+              &:active {
+                background-color: $Secondary2Darker;
+              }
             }
           }
           .share_button {
