@@ -1,0 +1,50 @@
+@import "../sharedStyles/colors.scss";
+
+nav {
+  width: 100%;
+  transition: 0.3s ease all;
+  .nav-item {
+    padding-left: 30px;
+    color: $White;
+    a {
+      color: $White;
+    }
+  }
+  .nav-link {
+    color: $White;
+  }
+}
+
+#logo {
+  content: url("../../assets/logos/logo_desktop-white.svg");
+
+  @media screen and (max-width: 600px) {
+    content: url("../../assets/logos/logo_mobile-white.svg");
+  }
+}
+
+.scrolled {
+  .nav-link {
+    color: $DefaultBlack !important;
+  }
+  #logo {
+    content: url("../../assets/logos/logo_desktop.svg");
+    @media screen and (max-width: 600px) {
+      content: url("../../assets/logos/logo_mobile.svg");
+    }
+  }  
+
+  #hamburger {
+    filter: saturate(100%) grayscale(100%) brightness(69%) contrast(1000%);
+
+  }
+  
+}
+
+#hamburger {
+  filter: brightness(0) saturate(0%) invert(100%);
+}
+
+.test {
+  width: 150px;
+}
