@@ -1,0 +1,242 @@
+@import "../../sharedStyles/colors.scss";
+@import "../../sharedStyles/animations.scss";
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.quiz-violet-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+  background: $Secondary2;
+  width: 100%;
+  height: 256px;
+  border-radius: 194.5px 272px 0px 194.5px;
+  h2 {
+    color: $Secondary1;
+    font-size: 46px;
+    margin-bottom: 17px;
+  }
+  p {
+    color: $White;
+    font-weight: bold;
+  }
+
+  p:last-child {
+    font-style: normal;
+    font-weight: lighter;
+    color: $White;
+    line-height: 30px;
+  }
+}
+
+.quiz-blue-bloc {
+  background: $Secondary1;
+  border-radius: 194.5px 194.5px 0px 194.5px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 352px;
+  margin-top: 95px;
+  margin-left: 30px;
+}
+
+.your-selection_title {
+  margin: 30px 0 0 0;
+  color: $Secondary2;
+  text-align: center;
+  height: 200px;
+  line-height: 191px;
+}
+
+.quiz-container {
+  margin-bottom: 50px;
+}
+
+.prev_button,
+.next_button {
+  background-color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.next_button {
+  color: $Secondary2Light;
+  font-style: normal;
+  font-weight: bold;
+  transition: 0.3s ease all;
+  position: relative;
+  left: 9px;
+
+  &.clickable {
+    color: $Secondary2;
+    &:hover {
+
+      color: $Secondary2Dark;
+      img {
+        transform: translateX(5px);
+        opacity: 1;
+      }
+    }
+  }
+
+  img {
+    position: relative;
+    top: 5px;
+    left: 2px;
+    filter: invert(27%) sepia(61%) saturate(2181%) hue-rotate(239deg) brightness(82%) contrast(94%);
+    opacity: 0;
+    transition: 0.3s ease all;
+  }
+}
+
+.prev_button {
+  font-style: normal;
+  font-weight: bold;
+  color: $Grey;
+  position: relative;
+  left: -18px;
+
+  img {
+    position: relative;
+    top: 5px;
+    left: -2px;
+    filter: invert(35%) sepia(0%) saturate(29%) hue-rotate(147deg) brightness(90%) contrast(79%);
+    opacity: 0;
+    transition: 0.3s ease all;
+  }
+
+  &:hover {
+    color: $GreyDark;
+    img {
+      transform: translateX(-5px);
+      opacity: 1;
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 90%;
+  height: 120px;
+  animation: fade-up ease 1s;
+
+  /* Button specification zone */
+  .input-answer {
+    width: 400px;
+    background: $Secondary1Dark;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 21px;
+    transition: background-color 0.2s ease;
+    overflow-wrap: break-word;
+
+    &:hover {
+      background-color: $Secondary1Dark;
+    }
+  }
+
+  .selected {
+    background-color: $Secondary2;
+
+    &:hover {
+      background-color: $Secondary2;
+    }
+  }
+
+  .v0 {
+    border-radius: 400px 400px 0 0;
+    margin-right: 15px;
+  }
+
+  .v1 {
+    border-radius: 400px 400px 0 0;
+    margin-left: 15px;
+  }
+
+  .v2 {
+    border-radius: 0 0 400px 400px;
+    margin-right: 15px;
+  }
+
+  .v3 {
+    border-radius: 0 0 400px 400px;
+    margin-left: 15px;
+  }
+
+  /* endzone */
+}
+
+@media screen and (max-width: 865px) {
+
+  .input-container {
+    // flex-wrap: nowrap !important;
+    height: auto !important;
+  }
+  .v0,
+  .v1,
+  .v2,
+  .v3 {
+    border-radius: 400px !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+}
+
+.quiz-question h4 {
+  color: $Secondary2;
+  margin: 92px 0 41px 0;
+}
+
+@media (max-width: 575.98px) {
+    .quiz-violet-bloc {
+      background: $Secondary2;
+      border-radius: inherit;
+      height: 406px;
+      padding: 35px;
+    }
+  }
+
+
+@media (max-width: 991.98px) {
+  .quiz-violet-bloc {
+    h2 {
+      font-size: 35px;
+      text-align: left;
+    }
+  }
+
+  .prev_button,
+  .next_button {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1215px) {
+  #quiz {
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+  .quiz-violet-bloc {
+    width: 100%;
+    border-radius: 0;
+  }
+  .quiz-blue-bloc {
+    display: none;
+  }
+}

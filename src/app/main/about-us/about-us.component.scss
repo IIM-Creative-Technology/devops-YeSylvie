@@ -1,0 +1,58 @@
+@import "../../sharedStyles/colors.scss";
+@import "../../sharedStyles/buttons.scss";
+
+.about-us-text {
+  h2 {
+    color: $Primary !important;
+  }
+}
+
+
+.img {
+    z-index: 5;
+    position: relative;
+}
+
+#content {
+    padding: 0;
+    margin: 0;
+}
+
+
+#content::before {
+  content: "";
+  width: 366.35px;
+  height: 117.57px;
+  display: block;
+  background: #ff526b;
+  border-radius: 194.5px 194.5px 0px 194.5px;
+  position: absolute;
+  top: -50px;
+  left: -15px;
+  z-index: -1;
+}
+
+@media (max-width: 991.98px) { 
+    img {
+        margin-top: 10%;
+    }
+    #content {
+        display: none;
+        ::before {
+            display: none;
+        }
+    }
+ }
+
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+   .a-propos-text {
+     width: 80%;
+     margin: 5% 0 0 10%;
+   }
+   .bloc-img {
+    text-align: center;
+    #content::before {
+        left: 136px;
+  }
+   }
+  }

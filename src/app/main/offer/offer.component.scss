@@ -1,0 +1,22 @@
+@import "../../sharedStyles/colors.scss";
+
+h2 {
+    max-width: 605px;
+    color: $Primary;
+}
+
+p {
+    line-height: 30px;
+}
+
+@media (max-width: 575.98px) { 
+    .container {
+        padding: 30px;
+    }
+ }
+
+@media (max-width:  1199.98px) {
+    img {
+        display: none;
+    }
+}
