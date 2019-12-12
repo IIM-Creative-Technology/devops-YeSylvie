@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ShareModule } from '@ngx-share/core';
 import { NgwWowModule } from 'ngx-wow';
+import { SafePipe } from './safe.pipe';
+import { CookieService } from 'ngx-cookie-service';
+import { ClipboardModule } from 'ngx-clipboard';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +21,7 @@ import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
 import { DiscoverComponent } from './main/discover/discover.component';
 import { SocialWallComponent } from './main/social-wall/social-wall.component';
-import { SafePipe } from './safe.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,6 @@ import { SafePipe } from './safe.pipe';
     DiscoverComponent,
     SocialWallComponent,
     SafePipe,
-
   ],
   imports: [
     BrowserModule,
@@ -42,9 +44,10 @@ import { SafePipe } from './safe.pipe';
     HttpClientModule,
     FormsModule,
     ShareModule,
-    NgwWowModule
+    NgwWowModule,
+    ClipboardModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ CookieService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

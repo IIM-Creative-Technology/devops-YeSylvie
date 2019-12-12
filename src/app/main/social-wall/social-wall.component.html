@@ -7,7 +7,11 @@
         </div>
         <div class="title_container">
             <div class="source-article_icon">
-                <img src="../../../assets/icons/facebook.svg" alt="Icône Facebook">
+                <img *ngIf="article.source == 'Facebook'" src="../../../assets/icons/facebook.svg" alt="Icône Facebook">
+                <img *ngIf="article.source == 'Twitter'" src="../../../assets/icons/twitter.svg" alt="Icône Twitter">
+                <img *ngIf="article.source == 'Instagram'" src="../../../assets/icons/instagram.svg" alt="Icône instagram">
+                <img *ngIf="article.source == 'Youtube'" src="../../../assets/icons/youtube.svg" alt="Icône Youtube">
+                <img *ngIf="article.source != 'Youtube' && article.source != 'Instagram' && article.source != 'Twitter' && article.source != 'Facebook'" src="../../../assets/icons/web.svg" alt="Icône Web">
             </div>
           <h5>{{ article.titre }}</h5>
         </div>
@@ -23,16 +27,10 @@
                 alt="Icône Facebook"
               />
             </button>
-            <!-- <button class="social-media_button twitter" [url]="article.url" tags="Hommage #Euphoriart" shareButton="twitter">
-              <img
-                src="../../../assets/icons/twitter.svg"
-                alt="Icône Twitter"
-              />
-            </button> -->
-            <button class="social-media_button copy" shareButton="copy" data-toggle="tooltip" data-placement="top" title="Copier le lien">
+            <button class="social-media_button copy" ngxClipboard [cbContent]="article.url">
               <img
                 src="../../../assets/icons/copylink.svg"
-                alt="Icône Twitter"
+                alt="Icône lien"
               />
             </button>
           </div>

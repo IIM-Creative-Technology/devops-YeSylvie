@@ -22,69 +22,39 @@
       <div class="row justify-content-center">
         <div class="input-container">
           <div *ngFor="let o of currentQuestionSet.option; let i = index">
-            <input
-              name="{{ currentQuestionSet.id }}"
-              (click)="setAnswser(o.tag)"
-              type="button"
-              [ngClass]="{
+            <input name="{{ currentQuestionSet.id }}" (click)="setAnswser(o.tag)" type="button" [ngClass]="{
                 selected: o.tag == currentAnswer,
                 'btn input-answer': true,
                 v0: i == 0,
                 v1: i == 1,
                 v2: i == 2,
                 v3: i == 3
-              }"
-              value="{{ o.name }}"
-            />
+              }" value="{{ o.name }}" />
           </div>
         </div>
-        <!-- <div class="row justify-content-center">
-            <div class="input-container">
-                <div *ngFor="let o of currentQuestionSet.option; let i =  index">
-                    <input name="{{currentQuestionSet.id}}" (click)="setAnswser(o.tag)" type="button" [ngClass]="{'selected' : o.name == currentAnswer, 'btn input-answer' : true, 'v0' : i == 0, 'v1' : i == 1, 'v2' : i == 2, 'v3' : i == 3}" value="{{o.tag}}" />
-                </div>
-            </div>
-        </div> -->
       </div>
       <div class="row justify-content-center" style="margin-top: 15px;">
-        <button
-          class="prev_button"
-          *ngIf="currentIndex + 4 != questions.length"
-          (click)="prev()"
-        >
-          <img
-            src="../../../assets/icons/arrow-left.svg"
-            alt="Icône flêche vers la droite"
-          />Question précédente
+        <button class="prev_button" *ngIf="currentIndex + 4 != questions.length" (click)="prev()">
+          <img src="../../../assets/icons/arrow-left.svg" alt="Icône flêche vers la droite" />Question précédente
         </button>
-        <button
-          [ngClass]="{ clickable: isAnswerSelected, next_button: true }"
-          *ngIf="currentIndex + 1 != questions.length"
-          [disabled]="!isAnswerSelected"
-          (click)="next()"
-        >
-          Question suivante<img
-            src="../../../assets/icons/arrow-right.svg"
-            alt="Icône flêche vers la droite"
-          />
+        <button [ngClass]="{ clickable: isAnswerSelected, next_button: true }"
+          *ngIf="currentIndex + 1 != questions.length" [disabled]="!isAnswerSelected" (click)="next()">
+          Question suivante<img src="../../../assets/icons/arrow-right.svg" alt="Icône flêche vers la droite" />
         </button>
       </div>
-      <div
-        class="row mt-3 mx-auto justify-content-center mt-4"
-        *ngIf="nbAnswers == questions.length && isAnswerSelected"
-      >
-        <input
-          type="button"
-          class="button_secondary2 button_valider"
-          value="Admire ta sélection !"
-          (click)="submit()"
-          (click)="show = !show"
-        />
+      <div class="row mt-3 mx-auto justify-content-center mt-4"
+        *ngIf="nbAnswers == questions.length && isAnswerSelected">
+        <input type="button" class="button_secondary2 button_valider" value="Admire ta sélection !" (click)="submit()"
+          (click)="show = !show" />
       </div>
-      <!-- <h3 *ngIf="!show" [@enterAnimation] class="your-selection_title">Voici ta séléction !</h3> -->
     </div>
+      <h3 [@enterAnimation] *ngIf="!show" class="your-selection_title">Voici ta séléction !</h3>
   </div>
 </section>
 <div class="social-wrapper" *ngIf="!show" [@socialWall]>
   <app-social-wall [articles]="articles"></app-social-wall>
+</div>
+<div *ngIf="!show" [@socialWall] class="restart_container">
+  <p>Recommencez le quiz pour peut être découvir de nouveaux articles !</p>
+    <button (click)="restart()" class="button_secondary2">Recommencer</button>
 </div>

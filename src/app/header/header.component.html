@@ -1,4 +1,8 @@
 <header class="overflow-hidden">
+    <video id="videoBG" poster="../../assets/header_background-min.jpg" autoplay muted loop>
+        <source src="../../assets/hommage.mp4" type="video/mp4">
+    </video>
+    
   <div class="top-gradient"></div>
   <div class="container header-wrapper">
     <div class="content-wrapper">
@@ -8,7 +12,7 @@
       <a href="#quiz">
         <button class="button_primary">
           <div class="height-fix">
-            Admirez notre hommage
+            Admirer notre hommage
             <img
               src="../../assets/icons/arrow-down-t.svg"
               alt="Icône fleche du bas"
@@ -17,5 +21,13 @@
         </button>
       </a>
     </div>
+    <a href="#offre-culturelle">
+      <img class="scroll_icon" src="../../assets/icons/scroll.svg" alt="Icône de défilement">
+    </a>
   </div>
 </header>
+
+<div *ngIf="showCookie" class="cookie-disclaimer">
+  <p>Des cookies ? Nous, on les mange ! Mais le site en a besoin pour fonctionner normalement. Si vous continuez à utiliser le site, c’est que vous êtes d’accord.</p>
+  <button (click)="acceptCookie()" class="button_secondary2">OK !</button>
+</div>

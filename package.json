@@ -25,6 +25,8 @@
     "bootstrap": "^4.4.1",
     "gsap": "^3.0.2",
     "jquery": "^3.4.1",
+    "ngx-clipboard": "^12.3.0",
+    "ngx-cookie-service": "^2.2.0",
     "ngx-wow": "^2.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

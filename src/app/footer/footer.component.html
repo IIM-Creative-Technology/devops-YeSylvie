@@ -2,9 +2,7 @@
 
 <footer>
   <div class="container">
-    <div
-      class="d-flex flex-lg-row justify-content-between flex-md-column flex-column flex-wrap"
-    >
+    <div class="d-flex flex-lg-row justify-content-between flex-md-column flex-column flex-wrap">
       <div class="p-2 cards-footer">
         <h3 class="mb-4">Nous contacter</h3>
         <div class="d-flex flex-row bd-highlight mb-3  detail-card">
@@ -13,26 +11,27 @@
             <div class="d-flex flex-column bd-highlight mb-3">
               <div class="p-2 bd-highlight">
                 <p>
-                  <img
-                    src="../../assets/icons/mail.svg"
-                    alt="Icône mail"
-                  />agence.studiose@gmail.com
+                  <a href="mailto:agence.studiose@gmail.com">
+                    <img src="../../assets/icons/mail.svg" alt="Icône mail" /><span
+                      class="link-to-contact">agence.studiose@gmail.com</span>
+                  </a>
                 </p>
               </div>
               <div class="p-2 bd-highlight">
                 <p>
-                  <img
-                    src="../../assets/icons/phone.svg"
-                    alt="Icône téléphone"
-                  />07 81 93 14 33
+                  <a href="tel:+33614127120">
+                    <img src="../../assets/icons/phone.svg" alt="Icône téléphone" />
+                    <span class="link-to-contact">07 81 93 14 33</span>
+                  </a>
                 </p>
               </div>
               <div class="p-2 bd-highlight">
                 <p>
-                  <img
-                    src="../../assets/icons/adress.svg"
-                    alt="Icône adresse"
-                  />19 rue Voltaire, 75011, PARIS
+                  <a href="https://www.google.fr/maps/place/19+Rue+Voltaire,+75011+Paris/@48.8526583,2.3892262,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67274fd0b00b3:0xbd260b61f2c3e82!8m2!3d48.8526583!4d2.3914149"
+                    target="_blanck">
+                    <img src="../../assets/icons/adress.svg" alt="Icône adresse" /><span class="link-to-contact">19 rue
+                      Voltaire, 75011, PARIS</span>
+                  </a>
                 </p>
               </div>
             </div>
@@ -46,29 +45,19 @@
           <div class="p-2 bd-highlight">
             <div class="d-flex flex-column bd-highlight mb-3">
               <div class="p-2  bd-highlight">
-                <a href="">
-                  <p>Relations Presse</p>
-                </a>
+                <button type="button" class="modals-buttons" data-toggle="modal" data-target="#politiqueModal">
+                  Politique de confidentialité
+                </button>
               </div>
               <div class="p-2 bd-highlight">
-                <a href="">
-                  <p>Cookies</p>
-                </a>
-              </div>
-              <div class="p-2  bd-highlight">
-                <button
-                  type="button"
-                  class=""
-                  data-toggle="modal"
-                  data-target="#mentionsModal"
-                >
-                  Mentions légales
+                <button type="button" class="modals-buttons" data-toggle="modal" data-target="#cookiesModal">
+                  Cookies
                 </button>
               </div>
               <div class="p-2  bd-highlight">
-                <a href="">
-                  <p>Plan du site</p>
-                </a>
+                <button type="button" class="modals-buttons" data-toggle="modal" data-target="#mentionsModal">
+                  Mentions légales
+                </button>
               </div>
             </div>
           </div>
@@ -81,52 +70,37 @@
           <div class="p-2 bd-highlight">
             <div class="d-flex flex-column bd-highlight mb-3">
               <div class="p-2 bd-highlight">
-                <a href="https://www.facebook.com/EuphoriartFR/">
+                <a href="https://www.facebook.com/EuphoriartFR/" target="_blank">
                   <p>
-                    <img
-                      src="../../assets/icons/facebook.svg"
-                      alt="Icône Facebook"
-                    />Facebook
+                    <img src="../../assets/icons/facebook.svg" alt="Icône Facebook" />Facebook
                   </p>
                 </a>
               </div>
               <div class="p-2  bd-highlight">
-                <a href="https://twitter.com/EuphoriartFR">
+                <a href="https://twitter.com/EuphoriartFR" target="_blank">
                   <p>
-                    <img
-                      src="../../assets/icons/twitter.svg"
-                      alt="Icône Twitter"
-                    />Twitter
+                    <img src="../../assets/icons/twitter.svg" alt="Icône Twitter" />Twitter
                   </p>
                 </a>
               </div>
               <div class="p-2 bd-highlight">
-                <a href="https://www.instagram.com/euphoriart_france/">
+                <a href="https://www.instagram.com/euphoriart_france/" target="_blank">
                   <p>
-                    <img
-                      src="../../assets/icons/instagram.svg"
-                      alt="Îcone Instagram"
-                    />Instagram
+                    <img src="../../assets/icons/instagram.svg" alt="Îcone Instagram" />Instagram
                   </p>
                 </a>
               </div>
               <div class="p-2 bd-highlight">
-                <a href="https://www.snapchat.com/add/EuphoriartFR">
+                <a href="https://www.snapchat.com/add/EuphoriartFR" target="_blank">
                   <p>
-                    <img
-                      src="../../assets/icons/snapchat.svg"
-                      alt="Icône Snapchat"
-                    />Snapchat
+                    <img src="../../assets/icons/snapchat.svg" alt="Icône Snapchat" />Snapchat
                   </p>
                 </a>
               </div>
               <div class="p-2 bd-highlight">
-                <a href=" https://vm.tiktok.com/xdWQuD/">
+                <a href=" https://vm.tiktok.com/xdWQuD/" target="_blank">
                   <p>
-                    <img
-                      src="../../assets/icons/tiktok.svg"
-                      alt="Icône TikTok"
-                    />TikTok
+                    <img src="../../assets/icons/tiktok.svg" alt="Icône TikTok" />TikTok
                   </p>
                 </a>
               </div>
@@ -139,36 +113,240 @@
 </footer>
 
 <!-- ZONE MODALES -->
-<!-- Modal -->
-<div
-  class="modal fade modal-mentions"
-  id="mentionsModal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="mentionsModalTitle"
-  aria-hidden="true"
->
+<!-- Modal Politique -->
+<div class="modal fade modal-mentions" id="politiqueModal" tabindex="-1" role="dialog" aria-labelledby="cookiesModal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 32px;" class="modal-title" id="cookiesModalTitle">
+          Politique de confidentialité
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Données personnelles recueillies</h4>
+        <p>
+          Les données personnelles que nous pouvons recueillir sont les réponses des utilisateurs du quizz accessible à
+          l’adresse <a href=" https://hommage.euphoriart.fr">https://hommage.euphoriart.fr</a>
+          <br>
+          Les données personnelles sont exclusivement traitées par Euphoriart, en sa qualité de propriétaire du site et
+          de responsable du traitement.
+          <br>
+          Le traitement des données personnelles a pour finalité de trier les différentes données visible du site afin
+          d’offrir un contenu personnalisé lors de la fréquentation de la partie du social wall du site.<br>
+          Les données personnelles sont traitées par Euphoriart sur la base son intérêt légitime (article 6.1 sous f°)
+          du Règlement général sur le protection des données).
+        </p>
+        <h4>Conservation des données personnelles</h4>
+        <p>
+          Les données personnelles seront conservées te temps nécessaire pour traiter la demande lorsque l’utilisateur
+          du site nous aura communiqué
+        </p>
+        <P>L’utilisateur du Site dispose d’un droit d’accès, de rectification, d’effacement des informations
+          personnelles le concernant, ainsi que d’un droit d’opposition ou de limitation du traitement le concernant,
+          qu’il peut exercer à tout moment en utilisant le questionnaire du site</P>
+        <P>L’utilisateur dispose enfin du droit à la portabilité de ses données ainsi que du droit d’introduire une
+          réclamation auprès d’une autorité de contrôle. </P>
+        <P>Les utilisateurs du Site sont informés que des témoins de connexion ou « cookies » peuvent être
+          temporairement installés dans leur terminal (ordinateur, mobile ou tablette), qu’ils sont libres d’accepter ou
+          refuser. </P>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button_secondary2" data-dismiss="modal">
+          J'ai compris !
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Cookies -->
+<div class="modal fade modal-mentions" id="cookiesModal" tabindex="-1" role="dialog" aria-labelledby="cookiesModal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 32px;" class="modal-title" id="cookiesModalTitle">
+          Information concernant l’utilisation des cookies
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Qu’est-ce qu’un cookie et à quoi sert-il ?</h4>
+        <p>
+          Un cookie est un fichier texte susceptible d’être enregistré, sous réserve de vos choix, sur votre terminal
+          (ordinateur, mobile ou tablette) lors de la visite d’un site ou de la consultation d’une publicité et qui a
+          pour but de collecter des informations relatives à votre navigation et de vous adresser des services adaptés à
+          votre terminal (ordinateur, mobile ou tablette).
+          <br>
+          <br>
+          Les cookies sont gérés par votre navigateur internet et seul l’émetteur d’un cookie est susceptible de lire ou
+          de modifier les informations qui y sont contenues.
+          <br>
+          <br>
+          Le cookie permet d’identifier le terminal dans lequel il est enregistré pendant la durée de validité ou
+          d’enregistrement du cookie concerné. Il ne permet pas de vous identifier personnellement.
+        </p>
+
+        <h4>Quelles catégories de cookies sont utilisées par le site Hommage d'Euphoriart ?</h4>
+        <p>
+          Les cookies techniques sont nécessaires à la navigation sur notre site, ainsi qu’à l’accès aux différents
+          produits et services. Les cookies techniques permettent en particulier de vous reconnaître (sans pour autant
+          vous identifier), de signaler votre passage sur telle ou telle page et ainsi d’améliorer votre confort de
+          navigation : adapter la présentation du site aux préférences d’affichage de votre terminal (langue utilisée,
+          résolution d’affichage), mémoriser les mots de passe et autres informations relatives à un formulaire que vous
+          avez rempli sur le site. Les cookies techniques permettent également de mettre en œuvre des mesures de
+          sécurité. Ces cookies ne peuvent pas être désactivés ou paramétrés sous peine de ne plus pouvoir accéder au
+          site et/ou aux services du site.
+          <br><br>
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom du cookie</th>
+              <th scope="col">Finalité</th>
+              <th scope="col">Durée de conservation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>user_choices</td>
+              <td>Gestions des réponses au questionnaire entrées par l'utilisateur</td>
+              <td>Durée de vie de 1 jour</td>
+            </tr>
+            <tr>
+              <td>user_validate</td>
+              <td>Gestion de l’acceptation des cookies sur le site</td>
+              <td>Durée de vie de 1 an</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Les cookies de mesure d’audience (aussi appelés cookies « analytiques ») sont émis par nous ou par nos
+          prestataires techniques aux fins de mesurer l’audience des différents contenus et rubriques de notre site,
+          afin de les évaluer et de mieux les organiser. Ces cookies permettent également, le cas échéant, de détecter
+          des problèmes de navigation et par conséquent d’améliorer l’ergonomie de nos services. Ces cookies ne
+          produisent que des statistiques anonymes et des volumes de fréquentation, à l’exclusion de toute information
+          individuelle. La durée de vie de ces cookies de mesure d’audience n’excède pas 13 mois.
+        </p>
+        <br>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom du cookie</th>
+              <th scope="col">Finalité</th>
+              <th scope="col">Durée de conservation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>_ga</td>
+              <td>Utiliser pour distinguer les utilisateurs</td>
+              <td>Durée de vie de 13 mois</td>
+            </tr>
+            <tr>
+              <td>_gat</td>
+              <td>Utiliser pour limiter le taux de rafraîchissement des statistiques</td>
+              <td>Durée de vie de 1 minute</td>
+            </tr>
+            <tr>
+              <td>_gid</td>
+              <td>Utiliser pour distinguer les utilisateurs</td>
+              <td>Durée de vie de 24 heures</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br><br>
+
+        <p>
+          Les cookies « Réseaux sociaux » permettent de partager des contenus de notre site avec d’autres personnes ou
+          de faire connaître à ces autres personnes votre consultation ou votre opinion concernant un contenu du site.
+          Tel est, notamment, le cas des boutons « partager », « j’aime », issus de réseaux sociaux « Facebook » ou «
+          Twitter ». Le réseau social fournissant un tel bouton applicatif est susceptible de vous identifier grâce à ce
+          bouton, même si vous ne l’avez pas utilisé lors de la consultation de notre site. Nous vous invitons à
+          consulter les politiques de protection de la vie privée de ces réseaux sociaux afin de prendre connaissance
+          des finalités d’utilisation, notamment publicitaires, des informations de navigation qu’ils peuvent recueillir
+          grâce à ces boutons applicatifs. La durée de vie de ces cookies n’excède pas 13 mois.
+        </p>
+
+        <h4>Facebook</h4>
+        <p>Les fonctionnalités suivantes de Facebook peuvent être intégrées à nos sites web et sont susceptibles de lire
+          ou de placer des cookies Facebook :</p>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Bouton J’aime de Facebook (qui permet à l’utilisateur d’indiquer qu’il aime un
+            élément sur Facebook)</li>
+          <li class="list-group-item">Se connecter à Facebook (qui permet à l’utilisateur de se connecter à son compte
+            Facebook et d’interagir
+            avec nos sites web via ce compte)</li>
+          <li class="list-group-item">Partager sur Facebook (qui permet à l’utilisateur de partager avec d’autres un
+            élément sur Facebook)</li>
+          <li class="list-group-item">Facebook Social Graph (qui permet à nos sites web d’extraire des éléments de
+            Facebook vers nos sites, tels que des images de profil utilisateur ou la publication de posts publics)</li>
+        </ul>
+
+        <h4>Twitter</h4>
+        <p>Les fonctionnalités Twitter suivantes peuvent être intégrées à nos sites web et sont susceptibles de lire ou
+          de placer des cookies Twitter :</p>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Connexion à Twitter (qui permet à l’utilisateur de se connecter à son compte
+            Twitter et d’interagir avec
+            nos sites web via ce compte)</li>
+          <li class="list-group-item">Bouton Tweeter</li>
+        </ul>
+
+        <h4>YouTube & Google</h4>
+        <p>Les fonctionnalités YouTube ou Google suivantes peuvent être intégrées à nos sites web et sont susceptibles
+          de lire ou de placer des cookies YouTube ou Google :</p>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Lecteur vidéo YouTube (qui permet l’affichage de vidéos YouTube sur nos sites web)
+          </li>
+          <li class="list-group-item">Connexion à YouTube (qui permet à un utilisateur de se connecter à son compte
+            YouTube et d’interagir avec
+            le DEC via ce compte)</li>
+        </ul>
+
+        <h4>Plus d’information sur les cookies</h4>
+        <p>Vous pouvez vous rendre sur le site de la CNIL, à cette adresse : « Cookies : les outils pour les maîtriser
+          ».
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button_secondary2" data-dismiss="modal">
+          J'ai compris !
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mentions-->
+<div class="modal fade modal-mentions" id="mentionsModal" tabindex="-1" role="dialog"
+  aria-labelledby="mentionsModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="mentionsModalTitle">
           Mentions légales
         </h3>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <p>
           Le site accessible à l’adresse
-          <a href="https://www.hommage.euphoriart.fr/"
-            >https://www.hommage.euphoriart.fr/</a
-          >
+          <a href="https://www.hommage.euphoriart.fr/">https://www.hommage.euphoriart.fr/</a>
         </p>
 
         <h4>Editeur</h4>
@@ -203,24 +381,24 @@
           Le site est une œuvre de l’esprit protégée par les droits de propriété
           intellectuelle. Toute reproduction ou représentation, en tout ou
           partie, à d’autres fins sur un quelconque support est interdite sans
-          l’autorisation expresse et préalable de Euphoriart et constituerait
+          l’autorisation expresse et préalable d'Euphoriart et constituerait
           une contrefaçon au sens qui lui est donné par le droit applicable. Le
           non-respect de cette interdiction constitue une contrefaçon pouvant
           engager la responsabilité civile et pénale du contrefacteur. Le site
           et chacun des éléments qui le composent tels que, notamment marques,
           textes, illustrations, logos, dénominations sociales, produits,
-          photographies sont la propriété exclusive de Euphoriart. Toute
+          photographies sont la propriété exclusive d'Euphoriart. Toute
           représentation et/ou reproduction et/ou exploitation partielle ou
-          totale de ces marques par un tiers est donc prohibée. Elle n’engagera
-          par ailleurs d’aucune manière la responsabilité de Euphoriart Les
+          totale de ces marques par un tiers sont donc prohibées. Elle n’engagera
+          par ailleurs d’aucune manière la responsabilité d'Euphoriart Les
           informations contenues dans ce site sont non contractuelles et
           sujettes à modification sans préavis. Les liens hypertextes mis en
           œuvre au sein du site en direction d’autres sites et d’une manière
-          générale vers toutes ressources existantes sur internet ne sauraient
-          engager la responsabilité de Euphoriart L’utilisation du site
+          générale vers toutes ressources existantes sur Internet ne sauraient
+          engager la responsabilité d'Euphoriart L’utilisation du site
           s’effectue exclusivement sous la responsabilité de l’utilisateur.
           Aucune garantie d’aucune sorte, explicite ou implicite, n’est
-          consentie par Euphoriart
+          consentie par Euphoriart.
         </p>
 
         <h4>Législation française</h4>
