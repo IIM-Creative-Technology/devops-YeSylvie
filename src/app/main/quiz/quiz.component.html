@@ -32,6 +32,7 @@
           </div>
         </div>
       </div>
+      <div class="container_quiz mt-5">
       <div class="quiz-button_container">
         <button class="button_secondary2"
           [ngClass]="{ clickable: isAnswerSelected, next_button: true, 'button-disabled' : currentIndex == 0 }"
@@ -52,6 +53,7 @@
           Admire ta sélection !
         </button>
       </div>
+    </div>
     </div>
     <h3 [@enterAnimation] *ngIf="!show" class="your-selection_title">Voici notre sélection !</h3>
   </div>
