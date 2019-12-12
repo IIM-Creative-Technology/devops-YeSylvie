@@ -43,11 +43,27 @@
   margin-left: 30px;
 }
 
+.restart_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+
+  p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin: 0 auto;
+  }
+}
+
 .your-selection_title {
   margin: 30px 0 0 0;
   color: $Secondary2;
   text-align: center;
-  height: 200px;
+  height: 150px;
   line-height: 191px;
 }
 
@@ -74,7 +90,6 @@
   &.clickable {
     color: $Secondary2;
     &:hover {
-
       color: $Secondary2Dark;
       img {
         transform: translateX(5px);
@@ -131,6 +146,7 @@
   /* Button specification zone */
   .input-answer {
     width: 400px;
+    height: 55px;
     background: $Secondary1Dark;
     color: #ffffff;
     font-style: normal;
@@ -177,7 +193,6 @@
 }
 
 @media screen and (max-width: 865px) {
-
   .input-container {
     // flex-wrap: nowrap !important;
     height: auto !important;
@@ -189,7 +204,6 @@
     border-radius: 400px !important;
     margin: 0 0 10px 0 !important;
   }
-
 }
 
 .quiz-question h4 {
@@ -198,14 +212,13 @@
 }
 
 @media (max-width: 575.98px) {
-    .quiz-violet-bloc {
-      background: $Secondary2;
-      border-radius: inherit;
-      height: 406px;
-      padding: 35px;
-    }
+  .quiz-violet-bloc {
+    background: $Secondary2;
+    border-radius: inherit;
+    height: 406px;
+    padding: 35px;
   }
-
+}
 
 @media (max-width: 991.98px) {
   .quiz-violet-bloc {

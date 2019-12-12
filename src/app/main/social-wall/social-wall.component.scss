@@ -155,11 +155,37 @@
 
               &:hover {
                 background-color: $Secondary2Dark;
+                &::after {
+                  position: absolute;
+                  width: 60px;
+                  height: 40px;
+                  background-color: $DefaultBlack;
+                  color: $White;
+                  top: -40px;
+                  padding-top: 11px;
+                  content: "Copier";
+                  transition: 0.3s ease;
+                  border-radius: 5px;
+                }
               }
 
               &:active {
                 background-color: $Secondary2Darker;
+                &::after {
+                  position: absolute;
+                  width: 60px;
+                  height: 40px;
+                  background-color: $DefaultBlack;
+                  color: $White;
+                  top: -40px;
+                  padding-top: 11px;
+                  content: "Fait !";
+                  transition: 0.3s ease;
+                  border-radius: 5px;
+                }
               }
+
+
             }
           }
           .share_button {

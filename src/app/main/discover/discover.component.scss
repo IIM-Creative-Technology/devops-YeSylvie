@@ -35,5 +35,39 @@
         filter: brightness(0) saturate(0%) invert(100%);
       }
     }
+
+    .copy {
+      &:hover {
+        &::after {
+          position: absolute;
+          width: 60px;
+          height: 40px;
+          background-color: $DefaultBlack;
+          color: $White;
+          top: -40px;
+          left: -0px;
+          padding-top: 11px;
+          content: "Copier";
+          transition: 0.3s ease;
+          border-radius: 5px;
+        }
+      }
+
+      &:active {
+        &::after {
+          position: absolute;
+          width: 60px;
+          height: 40px;
+          background-color: $DefaultBlack;
+          color: $White;
+          top: -40px;
+          left: -0px;
+          padding-top: 11px;
+          content: "Fait !";
+          transition: 0.3s ease;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 }
