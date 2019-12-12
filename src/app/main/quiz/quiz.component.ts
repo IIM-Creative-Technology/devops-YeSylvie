@@ -54,7 +54,7 @@ export class QuizComponent implements OnInit {
     this.questions = [
       {
         id: 1,
-        question: "Pour toi l'Art c'est :",
+        question: "Pour toi l'Art c'est : (1/4)",
         option: [
           { optionid: 1, name: "Peintures, toiles et musées", tag: "peinture" },
           {
@@ -77,7 +77,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 2,
-        question: "Tu es plutôt… ",
+        question: "Tu es plutôt… (2/4)",
         option: [
           { optionid: 1, name: "Un(e) vrai(e) gamer(euse) !", tag: "game" },
           { optionid: 2, name: "Branché(e) musique", tag: "musique" },
@@ -88,7 +88,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 3,
-        question: "Si je te dis arts du spectacle, tu me réponds ?",
+        question: "Si je te dis arts du spectacle, tu me réponds ? (3/4)",
         option: [
           {
             optionid: 1,
@@ -116,7 +116,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 4,
-        question: "Ce que tu préfères dans l’Art c’est :",
+        question: "Ce que tu préfères dans l’Art c’est : (4/4)",
         option: [
           {
             optionid: 1,
