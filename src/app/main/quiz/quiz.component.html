@@ -56,6 +56,10 @@
     </div>
     </div>
     <h3 [@enterAnimation] *ngIf="!show" class="your-selection_title">Voici notre sélection !</h3>
+    <p [@enterAnimation] *ngIf="!show">Tadam ! Voici le résultat de notre petit quizz ! 
+        Dans cette sélection rien que pour toi, tu trouveras des articles qui viennent de part et d'autre du web.
+        Si certains te plaisent, n'hésite pas les partager à tes amis sur tes réseaux. 
+        Bonne découverte !</p>
   </div>
 </section>
 <div class="social-wrapper" *ngIf="!show" [@socialWall]>
