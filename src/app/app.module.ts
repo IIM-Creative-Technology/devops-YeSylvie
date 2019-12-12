@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +21,7 @@ import { OfferComponent } from './main/offer/offer.component';
 import { ValuesComponent } from './main/values/values.component';
 import { DiscoverComponent } from './main/discover/discover.component';
 import { SocialWallComponent } from './main/social-wall/social-wall.component';
+import { VideoSectionComponent } from './main/video-section/video-section.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SocialWallComponent } from './main/social-wall/social-wall.component';
     DiscoverComponent,
     SocialWallComponent,
     SafePipe,
+    VideoSectionComponent,
   ],
   imports: [
     BrowserModule,
