@@ -2,8 +2,6 @@ import { Component, OnInit, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { trigger, style, animate, transition } from '@angular/animations';
 import { CookieService } from 'ngx-cookie-service';
-
-
 @Component({
   selector: "app-quiz",
   templateUrl: "./quiz.component.html",
@@ -46,12 +44,11 @@ export class QuizComponent implements OnInit {
   articles: Array<object> = [];
   currentAnswer: string;
   isAnswerSelected: boolean = false;
-  nbAnswers: number = 1;
+  nbAnswers: number = 0;
   showSocialWall: boolean = false;
   offset: number = 0;
   showQuiz: boolean = true;
   show:boolean = true;
-
   
   constructor(private http: HttpClient, private cookieService: CookieService) {
     this.questions = [
@@ -151,6 +148,7 @@ export class QuizComponent implements OnInit {
   }
   
   ngOnInit() {
+    console.log(this.nbAnswers)
    let isThereACookie = this.cookieService.check('user_choices');
    if(isThereACookie) {
      console.log("Un cookie de reposes est présent")
@@ -167,30 +165,28 @@ export class QuizComponent implements OnInit {
     if(this.answers.length == 3) this.answers[3] = x;
     console.log(x);
   }
-
   next() {
     this.currentIndex = this.currentIndex + 1;
     this.currentQuestionSet = this.questions[this.currentIndex];
     this.answers.push(this.currentAnswer);
     this.nbAnswers++;
     this.isAnswerSelected = false;
-    console.log(this.answers);
+    console.log(this.nbAnswers);
     
   }
-
   prev() {
     this.currentIndex = this.currentIndex - 1;
     this.currentQuestionSet = this.questions[this.currentIndex];
     this.answers.pop();
     this.nbAnswers--;
     this.currentAnswer = "";
+    this.isAnswerSelected = false;
+    console.log(this.answers);
   }
-
   submit() {
     this.showQuiz = false;
     this.currentIndex = 0;
     this.currentQuestionSet = this.questions[this.currentIndex];
-
     // URL pour le local : http://localhost/hommage/api/getSocialWall.php
     this.http.post("https://www.euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( 
       data => {
@@ -205,7 +201,6 @@ export class QuizComponent implements OnInit {
       error => {
         console.log("Error : ", error);
       }) ;
-
     let now = new Date();
     let time = now.getTime();
     time += 3600*1000;
@@ -215,7 +210,6 @@ export class QuizComponent implements OnInit {
     this.cookieValue = this.cookieService.get('user_choices');
     console.log(this.cookieValue);
   }
-
   restart() {
     this.answers = [];
     this.articles = [];
@@ -223,9 +217,5 @@ export class QuizComponent implements OnInit {
     this.nbAnswers = 1;
     this.show = true;
     this.cookieService.delete('user_choices')
-  }
-
-  get showButton() {
-    return this.nbAnswers !=4 || !this.isAnswerSelected;
   }
 }

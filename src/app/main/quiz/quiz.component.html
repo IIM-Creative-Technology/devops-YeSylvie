@@ -10,7 +10,6 @@
           d'articles sélectionnés par nos soins !
         </p>
       </div>
-
       <div class="quiz-blue-bloc"></div>
     </div>
     <div class="quiz-container" *ngIf="show" [@enterAnimation]>
@@ -36,7 +35,7 @@
       <div class="quiz-button_container">
         <button class="button_secondary2"
           [ngClass]="{ clickable: isAnswerSelected, next_button: true, 'button-disabled' : currentIndex == 0 }"
-          [disabled]="this.nbAnswers == 0 || this.nbAnswers == 1"
+          [disabled]="this.nbAnswers == 0 || this.nbAnswers == 0"
           (click)="prev()">
           Question précédente
         </button>
@@ -48,7 +47,7 @@
         </button>
       </div>
       <div class="row mt-3 mx-auto justify-content-center mt-4">
-        <button [disabled]="showButton" [ngClass]="{'button-disabled' : showButton}" type="button"
+        <button [disabled]="showButton" [ngClass]="{'button-disabled' :  currentIndex != 3 || !isAnswerSelected}" type="button"
           class="button_primary button_valider" (click)="submit()" (click)="show = !show">
           Admire ta sélection !
         </button>
