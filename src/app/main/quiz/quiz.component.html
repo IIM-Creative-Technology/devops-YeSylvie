@@ -33,22 +33,28 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center" style="margin-top: 15px;">
-        <button class="prev_button" *ngIf="currentIndex + 4 != questions.length" (click)="prev()">
-          <img src="../../../assets/icons/arrow-left.svg" alt="Icône flêche vers la droite" />Question précédente
+      <div class="quiz-button_container">
+        <button class="button_secondary2"
+          [ngClass]="{ clickable: isAnswerSelected, next_button: true, 'button-disabled' : currentIndex == 0 }"
+          [disabled]="this.nbAnswers == 0 || this.nbAnswers == 1"
+          (click)="prev()">
+          Question précédente
         </button>
-        <button [ngClass]="{ clickable: isAnswerSelected, next_button: true }"
-          *ngIf="currentIndex + 1 != questions.length" [disabled]="!isAnswerSelected" (click)="next()">
-          Question suivante<img src="../../../assets/icons/arrow-right.svg" alt="Icône flêche vers la droite" />
+        <button class="button_secondary2"
+          [ngClass]="{ clickable: isAnswerSelected, next_button: true, 'button-disabled' : !isAnswerSelected || currentIndex == 3  }"
+          [disabled]="!isAnswerSelected || currentIndex == 3" 
+          (click)="next()">
+          Question suivante
         </button>
       </div>
-      <div class="row mt-3 mx-auto justify-content-center mt-4"
-        *ngIf="nbAnswers == questions.length && isAnswerSelected">
-        <input type="button" class="button_secondary2 button_valider" value="Admire ta sélection !" (click)="submit()"
-          (click)="show = !show" />
+      <div class="row mt-3 mx-auto justify-content-center mt-4">
+        <button [disabled]="showButton" [ngClass]="{'button-disabled' : showButton}" type="button"
+          class="button_primary button_valider" (click)="submit()" (click)="show = !show">
+          Admire ta sélection !
+        </button>
       </div>
     </div>
-      <h3 [@enterAnimation] *ngIf="!show" class="your-selection_title">Voici ta séléction !</h3>
+    <h3 [@enterAnimation] *ngIf="!show" class="your-selection_title">Voici notre sélection !</h3>
   </div>
 </section>
 <div class="social-wrapper" *ngIf="!show" [@socialWall]>
@@ -56,5 +62,5 @@
 </div>
 <div *ngIf="!show" [@socialWall] class="restart_container">
   <p>Recommencez le quiz pour peut être découvir de nouveaux articles !</p>
-    <button (click)="restart()" class="button_secondary2">Recommencer</button>
+  <button (click)="restart()" class="button_secondary2">Recommencer</button>
 </div>

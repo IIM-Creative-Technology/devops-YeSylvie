@@ -151,10 +151,10 @@ export class QuizComponent implements OnInit {
   }
   
   ngOnInit() {
-   let isThereACookie = this.cookieService.check('reponses');
+   let isThereACookie = this.cookieService.check('user_choices');
    if(isThereACookie) {
      console.log("Un cookie de reposes est présent")
-     let cookieData = this.cookieService.get('reponses');
+     let cookieData = this.cookieService.get('user_choices');
       this.answers = cookieData.split('|')
       this.submit();
       this.nbAnswers = 4;
@@ -211,8 +211,8 @@ export class QuizComponent implements OnInit {
     time += 3600*1000;
     now.setTime(time);
     let cookieData: string = this.answers.join('|');
-    this.cookieService.set('reponses', cookieData, 1);
-    this.cookieValue = this.cookieService.get('reponses');
+    this.cookieService.set('user_choices', cookieData, 1);
+    this.cookieValue = this.cookieService.get('user_choices');
     console.log(this.cookieValue);
   }
 
@@ -222,5 +222,10 @@ export class QuizComponent implements OnInit {
     this.isAnswerSelected = false;
     this.nbAnswers = 1;
     this.show = true;
+    this.cookieService.delete('user_choices')
+  }
+
+  get showButton() {
+    return this.nbAnswers !=4 || !this.isAnswerSelected;
   }
 }
