@@ -48,7 +48,7 @@
         </button>
       </div>
       <div class="row mt-3 mx-auto justify-content-center mt-4">
-        <button [disabled]="showButton" [ngClass]="{'button-disabled' :  currentIndex != 3 || !isAnswerSelected}" type="button"
+        <button [disabled]="currentIndex != 3 || !isAnswerSelected" [ngClass]="{'button-disabled' :  currentIndex != 3 || !isAnswerSelected}" type="button"
           class="button_primary button_valider" (click)="submit()" (click)="show = !show">
           Admire ta sélection !
         </button>
