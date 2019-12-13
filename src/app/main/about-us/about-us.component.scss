@@ -18,7 +18,6 @@
     margin: 0;
 }
 
-
 #content::before {
   content: "";
   width: 366.35px;
@@ -29,7 +28,11 @@
   position: absolute;
   top: -50px;
   left: -15px;
-  z-index: -1;
+  z-index: 0;
+}
+
+.explainer {
+  z-index: 1;
 }
 
 @media (max-width: 991.98px) { 
