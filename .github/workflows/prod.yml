@@ -1,6 +1,6 @@
-name : Prod - Deploy website Hommage to Heroku
-
-on:
-  pull_request:
-    branch:
-      - master
+#name : Prod - Deploy website Hommage to Heroku
+#
+#on:
+#  pull_request:
+#    branch:
+#      - master
