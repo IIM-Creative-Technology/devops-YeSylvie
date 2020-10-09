@@ -1,0 +1,6 @@
+name : Prepod - Deploy website Hommage to Heroku
+
+on:
+  pull_request:
+    branch:
+      - develop
