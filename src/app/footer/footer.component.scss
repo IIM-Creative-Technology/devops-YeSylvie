@@ -52,6 +52,19 @@ footer {
       filter: brightness(0) saturate(0%) invert(100%);
     }
   }
+
+  .modals-buttons {
+    margin-bottom: 20px;
+  }
+
+  .link-to-contact {
+    color: white;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
 }
 
 .modal-mentions {

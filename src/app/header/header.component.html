@@ -5,17 +5,23 @@
       <h1 class="main-title">Hommage</h1>
       <div class="sub-title">Le lien digital</div>
       <div class="separator"></div>
-      <a href="#quiz">
+      <a href="#videoSection">
         <button class="button_primary">
           <div class="height-fix">
-            Admirez notre hommage
-            <img
-              src="../../assets/icons/arrow-down-t.svg"
-              alt="Icône fleche du bas"
-            />
+            Admirer notre hommage
+            <img src="../../assets/icons/arrow-down-t.svg" alt="Icône fleche du bas" />
           </div>
         </button>
       </a>
     </div>
+    <a href="#offre-culturelle">
+      <img class="scroll_icon" src="../../assets/icons/scroll.svg" alt="Icône de défilement">
+    </a>
   </div>
 </header>
+
+<div *ngIf="showCookie" class="cookie-disclaimer">
+  <p>Des cookies ? Nous, on les mange ! Mais le site en a besoin pour fonctionner normalement. Si vous continuez à
+    utiliser le site, c’est que vous êtes d’accord.</p>
+  <button (click)="acceptCookie()" class="button_secondary2">OK !</button>
+</div>

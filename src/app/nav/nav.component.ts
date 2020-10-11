@@ -18,6 +18,7 @@ export class NavComponent implements OnInit {
 
       if (this.window.scrollY > 90) {
         nav.style.backgroundColor = 'white';
+        nav.style.boxShadow = '0px 1px 2px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)';
         if (!nav.classList.contains('scrolled')) {
           nav.classList.add('scrolled');
           logo.setAttribute('src', '../../assets/logos/logo_desktop.svg');
@@ -25,6 +26,7 @@ export class NavComponent implements OnInit {
         }
       } else {
         nav.style.backgroundColor = 'transparent';
+        nav.style.boxShadow = 'none';
         if (nav.classList.contains('scrolled')) {
           nav.classList.remove('scrolled');
           hamburger.setAttribute('src', '../../assets/icons/hamburger.svg');

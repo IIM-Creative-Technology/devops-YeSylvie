@@ -1,9 +1,25 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { ClipboardService } from 'ngx-clipboard'
 
 @Component({
   selector: 'app-social-wall',
   templateUrl: './social-wall.component.html',
-  styleUrls: ['./social-wall.component.scss']
+  styleUrls: ['./social-wall.component.scss'],
+  animations: [
+    trigger(
+      'showShare', [
+        transition(':enter', [
+          style({transform: 'translateY(50%)', opacity: 0}),
+          animate('200ms', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateY(0)', opacity: 1}),
+          animate('200ms', style({transform: 'translateY(50%)', opacity: 0}))
+        ])
+      ],
+    )
+  ]
 })
 export class SocialWallComponent implements OnInit {
   @Input() articles: Array<string>;
@@ -11,7 +27,7 @@ export class SocialWallComponent implements OnInit {
    showShareButtons: boolean;
    hideme = []
   
-  constructor() { }
+  constructor(private _clipboardService: ClipboardService) { }
 
   ngOnInit() {
     this.showShareButtons = false;
@@ -25,8 +41,7 @@ export class SocialWallComponent implements OnInit {
     this.hideme[x] = !currentState;
   }
 
-  getTwitterUrl(x:string) {
-    console.log("'" + x + "'")
-    return "'" + x + "'";
+  copy(text: string){
+    this._clipboardService.copyFromContent(text)
   }
 }

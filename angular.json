@@ -22,20 +22,16 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "../hommage/node_modules/bootstrap/dist/css/bootstrap.css",
-              "../hommage/node_modules/animate.css/animate.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "../hommage/node_modules/jquery/dist/jquery.min.js",
-              "../hommage/node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "../hommage/node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {
@@ -51,7 +47,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,

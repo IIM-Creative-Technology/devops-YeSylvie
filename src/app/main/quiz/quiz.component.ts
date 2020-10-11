@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { trigger, style, animate, transition } from '@angular/animations';
-
-
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: "app-quiz",
   templateUrl: "./quiz.component.html",
@@ -35,6 +34,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
   ]
 })
 export class QuizComponent implements OnInit {
+  cookieValue = 'UNKNOWN';
   questions: Array<object> = [];
   currentIndex: number;
   notAttempted: any;
@@ -44,20 +44,17 @@ export class QuizComponent implements OnInit {
   articles: Array<object> = [];
   currentAnswer: string;
   isAnswerSelected: boolean = false;
-  nbAnswers: number = 1;
+  nbAnswers: number = 0;
   showSocialWall: boolean = false;
   offset: number = 0;
   showQuiz: boolean = true;
   show:boolean = true;
-
-  ngOnInit() {
-  }
-
-  constructor(private http: HttpClient) {
+  
+  constructor(private http: HttpClient, private cookieService: CookieService) {
     this.questions = [
       {
         id: 1,
-        question: "Pour toi l'Art c'est :",
+        question: "Pour toi l'Art c'est : (1/4)",
         option: [
           { optionid: 1, name: "Peintures, toiles et musées", tag: "peinture" },
           {
@@ -80,7 +77,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 2,
-        question: "Tu es plutôt… ",
+        question: "Tu es plutôt… (2/4)",
         option: [
           { optionid: 1, name: "Un(e) vrai(e) gamer(euse) !", tag: "game" },
           { optionid: 2, name: "Branché(e) musique", tag: "musique" },
@@ -91,7 +88,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 3,
-        question: "Si je te dis arts du spectacle, tu me réponds ?",
+        question: "Si je te dis arts du spectacle, tu me réponds ? (3/4)",
         option: [
           {
             optionid: 1,
@@ -111,7 +108,7 @@ export class QuizComponent implements OnInit {
           {
             optionid: 4,
             name:
-              "Classique, jazz, rock, rap,... La musique c'est le sang",
+            "Classique, jazz, rock, rap,... La musique c'est le sang",
             tag: "musique"
           }
         ],
@@ -119,7 +116,7 @@ export class QuizComponent implements OnInit {
       },
       {
         id: 4,
-        question: "Ce que tu préfères dans l’Art c’est :",
+        question: "Ce que tu préfères dans l’Art c’est : (4/4)",
         option: [
           {
             optionid: 1,
@@ -145,45 +142,51 @@ export class QuizComponent implements OnInit {
         selected: 0
       }
     ];
-
+    
     this.currentIndex = 0;
     this.currentQuestionSet = this.questions[this.currentIndex];
   }
-
-  getResponse() {
-    
+  
+  ngOnInit() {
+    console.log(this.nbAnswers)
+   let isThereACookie = this.cookieService.check('user_choices');
+   if(isThereACookie) {
+     console.log("Un cookie de reposes est présent")
+     let cookieData = this.cookieService.get('user_choices');
+      this.answers = cookieData.split('|')
+      this.submit();
+      this.nbAnswers = 4;
+      this.show = !this.show;
+   } 
   }
-
   setAnswser(x) {
     this.isAnswerSelected = true;
     this.currentAnswer = x;
     if(this.answers.length == 3) this.answers[3] = x;
     console.log(x);
   }
-
   next() {
     this.currentIndex = this.currentIndex + 1;
     this.currentQuestionSet = this.questions[this.currentIndex];
     this.answers.push(this.currentAnswer);
     this.nbAnswers++;
     this.isAnswerSelected = false;
-    console.log(this.answers);
+    console.log(this.nbAnswers);
     
   }
-
   prev() {
     this.currentIndex = this.currentIndex - 1;
     this.currentQuestionSet = this.questions[this.currentIndex];
     this.answers.pop();
     this.nbAnswers--;
     this.currentAnswer = "";
+    this.isAnswerSelected = false;
+    console.log(this.answers);
   }
-
   submit() {
     this.showQuiz = false;
     this.currentIndex = 0;
     this.currentQuestionSet = this.questions[this.currentIndex];
-
     // URL pour le local : http://localhost/hommage/api/getSocialWall.php
     this.http.post("https://www.euphoriart.fr/hommage/getSocialWall.php", this.answers).subscribe( 
       data => {
@@ -198,5 +201,21 @@ export class QuizComponent implements OnInit {
       error => {
         console.log("Error : ", error);
       }) ;
+    let now = new Date();
+    let time = now.getTime();
+    time += 3600*1000;
+    now.setTime(time);
+    let cookieData: string = this.answers.join('|');
+    this.cookieService.set('user_choices', cookieData, 1);
+    this.cookieValue = this.cookieService.get('user_choices');
+    console.log(this.cookieValue);
+  }
+  restart() {
+    this.answers = [];
+    this.articles = [];
+    this.isAnswerSelected = false;
+    this.nbAnswers = 1;
+    this.show = true;
+    this.cookieService.delete('user_choices')
   }
 }

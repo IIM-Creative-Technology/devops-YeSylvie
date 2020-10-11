@@ -1,0 +1,36 @@
+name : Prod - Deploy website Hommage to Heroku
+
+on:
+  pull_request:
+    branch:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Init project
+        uses: actions/checkout@v2
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install -g @angular/cli
+      - name: Build
+        run: ng build
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.5.6
+        with:
+          heroku_api_key: ${{secrets.HEROKU_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_PROD}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
