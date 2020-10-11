@@ -1,4 +1,4 @@
-name : Prepod - Deploy website Hommage to Heroku
+name : Preprod - Deploy website Hommage to Heroku
 
 on:
   pull_request:
