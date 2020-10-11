@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "../hommage/node_modules/bootstrap/dist/css/bootstrap.css",
-              "../hommage/node_modules/animate.css/animate.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": [
